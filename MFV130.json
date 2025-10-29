@@ -1,0 +1,1854 @@
+{
+    "title": "Respondent ratings of moral scenarios",
+    "description": "Care (e) refers to emotional harm scenarios, Care (p, h) to physical harm to a human, and Care (p, a) to physical harm to a nonhuman animal. Wrong represents average ratings of moral wrongness on a 5-point scale, where 0 = not at all wrong and 4 = extremely wrong.",
+    "scenarios": [
+      {
+        "scenario": "You see a teenage boy chuckling at an amputee he passes by while on the subway.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 83,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 10,
+          "liberty": 3,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a girl laughing at another student forgetting her lines at a school play.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 73,
+          "fairness": 3,
+          "loyalty": 7,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 13,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.4
+      },
+      {
+        "scenario": "You see a woman commenting out loud about how fat another woman looks in her jeans.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 73,
+          "fairness": 7,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 13,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a man quickly canceling a blind date as soon as he sees the woman.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 72,
+          "fairness": 16,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 6,
+          "liberty": 3,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a boy telling a woman that she looks just like her overweight bulldog.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 72,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 13,
+          "sanctity": 0,
+          "liberty": 16,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a girl laughing when she realizes her friend's dad is the janitor.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 70,
+          "fairness": 7,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 7,
+          "liberty": 10,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see a man snickering as he passes by a cancer patient with a bald head.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 69,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 17,
+          "liberty": 10,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a girl saying that another girl is too ugly to be a varsity cheerleader.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 69,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 7,
+          "liberty": 14,
+          "not_wrong": 7
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a teenage girl openly staring at a disfigured woman as she walks past.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 68,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 23
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a boy making fun of his brother for getting dumped by his girlfriend.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 68,
+          "fairness": 0,
+          "loyalty": 13,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 10,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a man laughing at a disabled co-worker while at an office softball game.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 68,
+          "fairness": 6,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 6,
+          "liberty": 19,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.5
+      },
+      {
+        "scenario": "You see a man loudly telling his wife that the dinner she cooked tastes awful.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 66,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 13,
+          "liberty": 6,
+          "not_wrong": 9
+        },
+        "wrongness_rating": 2.4
+      },
+      {
+        "scenario": "You see a man telling a woman that her painting looks like it was done by children.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 66,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 6,
+          "sanctity": 0,
+          "liberty": 16,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 1.9
+      },
+      {
+        "scenario": "You see a woman clearly avoiding sitting next to an obese woman on the bus.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 64,
+          "fairness": 7,
+          "loyalty": 0,
+          "authority": 4,
+          "sanctity": 4,
+          "liberty": 4,
+          "not_wrong": 18
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a girl telling a boy that his older brother is much more attractive than him.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 63,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 25
+        },
+        "wrongness_rating": 1.4
+      },
+      {
+        "scenario": "You see a girl telling her classmate that she looks like she has gained weight.",
+        "foundation": "Care (e)",
+        "classifications": {
+          "care": 60,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 13,
+          "liberty": 10,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a woman swerving her car in order to intentionally run over a squirrel.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 87,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 5,
+          "liberty": 3,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see a woman throwing her cat across the room for scratching the furniture.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 85,
+          "fairness": 2,
+          "loyalty": 0,
+          "authority": 2,
+          "sanctity": 5,
+          "liberty": 5,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see a boy throwing rocks at cows that are grazing in the local pasture.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 85,
+          "fairness": 0,
+          "loyalty": 2,
+          "authority": 5,
+          "sanctity": 5,
+          "liberty": 2,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a man lashing his pony with a whip for breaking loose from its pen.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 83,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 2,
+          "sanctity": 7,
+          "liberty": 5,
+          "not_wrong": 2
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see a boy setting a series of traps to kill stray cats in his neighborhood.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 81,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 14,
+          "liberty": 0,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.6
+      },
+      {
+        "scenario": "You see a zoo trainer jabbing a dolphin to get it to entertain his customers.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 76,
+          "fairness": 2,
+          "loyalty": 5,
+          "authority": 5,
+          "sanctity": 2,
+          "liberty": 7,
+          "not_wrong": 2
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see someone leaving his dog outside in the rain after it dug in the trash.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 75,
+          "fairness": 0,
+          "loyalty": 8,
+          "authority": 3,
+          "sanctity": 5,
+          "liberty": 3,
+          "not_wrong": 8
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a girl shooting geese repeatedly with a pellet gun out in the woods.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 69,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 5,
+          "sanctity": 13,
+          "liberty": 5,
+          "not_wrong": 8
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a woman snatching away her dog's food for making a mess in the living room.",
+        "foundation": "Care (p, a)",
+        "classifications": {
+          "care": 63,
+          "fairness": 6,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 9,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a woman throwing a stapler at her colleague who is snoring during her talk.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 78,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 8,
+          "sanctity": 0,
+          "liberty": 5,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a teacher hitting a student's hand with a ruler for falling asleep in class.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 78,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 5,
+          "sanctity": 3,
+          "liberty": 8,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a woman slapping another woman who she is arguing with in the parking lot.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 78,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 5,
+          "liberty": 13,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a girl throwing her hot coffee on a woman who is dating her ex-boyfriend",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 73,
+          "fairness": 0,
+          "loyalty": 8,
+          "authority": 5,
+          "sanctity": 5,
+          "liberty": 8,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a wife hitting her husband on the side of his head for coming home late.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 69,
+          "fairness": 8,
+          "loyalty": 5,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 15,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see a boy placing a thumbtack sticking up on the chair of another student.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 65,
+          "fairness": 0,
+          "loyalty": 10,
+          "authority": 8,
+          "sanctity": 3,
+          "liberty": 13,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a woman spanking her child with a spatula for getting bad grades in school.",
+        "foundation": "Care (p, h)",
+        "classifications": {
+          "care": 62,
+          "fairness": 3,
+          "loyalty": 5,
+          "authority": 0,
+          "sanctity": 5,
+          "liberty": 10,
+          "not_wrong": 15
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see a student copying a classmate's answer sheet on a makeup final exam.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 100,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a runner taking a shortcut on the course during the marathon in order to win.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 97,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a tenant bribing a landlord to be the first to get their apartment repainted.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 97,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 3,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a soccer player pretending to be seriously fouled by an opposing player.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 94,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 3,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see someone cheating in a card game while playing with a group of strangers.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 93,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see a professor giving a bad grade to a student just because he dislikes him.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 93,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.7
+      },
+      {
+        "scenario": "You see a referee intentionally making bad calls that help his favored team win.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 90,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a manager taking half the doughnuts from a box, leaving little for others.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 90,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 7
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a judge taking on a criminal case although he is friends with the defendant.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 89,
+          "loyalty": 4,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 7
+        },
+        "wrongness_rating": 3.1
+      },
+      {
+        "scenario": "You see a student getting an A on a group project when he didn't do his part.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 88,
+          "loyalty": 9,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see an employee lying about how many hours she worked during the week.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 87,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see a woman getting hired only because her father is close friends with the boss.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 84,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 3,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.4
+      },
+      {
+        "scenario": "You see a girl asking for allowance even though her brother did her chores for her.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 82,
+          "loyalty": 3,
+          "authority": 6,
+          "sanctity": 6,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a girl taking all the Halloween candy from a bowl, leaving none for others.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 6,
+          "fairness": 74,
+          "loyalty": 10,
+          "authority": 6,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see a politician using federal tax dollars to build an extension on his home.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 71,
+          "loyalty": 19,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 3,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.8
+      },
+      {
+        "scenario": "You see a boy skipping to the front of the line because his friend is an employee.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 3,
+          "fairness": 70,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.4
+      },
+      {
+        "scenario": "You see a woman lying about the number of vacation days she has taken at work.",
+        "foundation": "Fairness",
+        "classifications": {
+          "care": 0,
+          "fairness": 60,
+          "loyalty": 10,
+          "authority": 7,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 23
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see an employee joking with competitors about how bad his company did last year.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 84,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a coach celebrating with the opposing team's players who just won the game.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 76,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 3,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 1.8
+      },
+      {
+        "scenario": "You see a former US General saying publicly he would never buy any American product.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 75,
+          "authority": 6,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 16
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see a mayor saying that the neighboring town is a much better town.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 74,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 16
+        },
+        "wrongness_rating": 1.6
+      },
+      {
+        "scenario": "You see the US Ambassador joking in Great Britain about the stupidity of Americans.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 74,
+          "authority": 16,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a man leaving his family business to go work for their main competitor.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 73,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 20
+        },
+        "wrongness_rating": 1.7
+      },
+      {
+        "scenario": "You see a teacher publicly saying she hopes another school wins the math contest.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 12,
+          "fairness": 0,
+          "loyalty": 69,
+          "authority": 0,
+          "sanctity": 4,
+          "liberty": 0,
+          "not_wrong": 15
+        },
+        "wrongness_rating": 1.9
+      },
+      {
+        "scenario": "You see a head cheerleader booing her high school's team during a homecoming game.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 7,
+          "fairness": 0,
+          "loyalty": 69,
+          "authority": 7,
+          "sanctity": 0,
+          "liberty": 7,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 2.3
+      },
+      {
+        "scenario": "You see the class president saying on TV that her rival college is a better school.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 68,
+          "authority": 6,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 26
+        },
+        "wrongness_rating": 1.4
+      },
+      {
+        "scenario": "You see a Hollywood star agreeing with a foreign dictator's denunciation of the US.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 67,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 27
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a college president singing a rival school's fight song during a pep rally.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 66,
+          "authority": 7,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 24
+        },
+        "wrongness_rating": 1.7
+      },
+      {
+        "scenario": "You see a man secretly voting against his wife in a local beauty pageant.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 10,
+          "fairness": 7,
+          "loyalty": 66,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 1.9
+      },
+      {
+        "scenario": "You see an American telling foreigners that the US is an evil force in the world.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 10,
+          "fairness": 0,
+          "loyalty": 66,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 14
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see the coach's wife sponsoring a bake sale for her husband's rival team.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 6,
+          "loyalty": 65,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 29
+        },
+        "wrongness_rating": 1.5
+      },
+      {
+        "scenario": "You see a former Secretary of State publicly giving up his citizenship to the US.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 62,
+          "authority": 10,
+          "sanctity": 0,
+          "liberty": 7,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a US swimmer cheering as a Chinese foe beats his teammate to win the gold.",
+        "foundation": "Loyalty",
+        "classifications": {
+          "care": 2,
+          "fairness": 2,
+          "loyalty": 61,
+          "authority": 7,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 27
+        },
+        "wrongness_rating": 1.8
+      },
+      {
+        "scenario": "You see a girl ignoring her father's orders by taking the car after her curfew.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 6,
+          "authority": 81,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see a woman refusing to stand when the judge walks into the courtroom.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 80,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a girl repeatedly interrupting her teacher as he explains a new concept.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 80,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a woman spray painting graffiti across the steps of the local courthouse.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 78,
+          "sanctity": 16,
+          "liberty": 0,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see an intern disobeying an order to dress professionally and comb his hair.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 78,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 19
+        },
+        "wrongness_rating": 1.9
+      },
+      {
+        "scenario": "You see a man turn his back and walk away while his boss questions his work.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 2,
+          "fairness": 0,
+          "loyalty": 2,
+          "authority": 78,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a staff member talking loudly and interrupting the mayor's speech to the public.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 0,
+          "fairness": 8,
+          "loyalty": 8,
+          "authority": 76,
+          "sanctity": 5,
+          "liberty": 3,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a teenage girl coming home late and ignoring her parents' strict curfew.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 75,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.3
+      },
+      {
+        "scenario": "You see a boy spray-painting anarchy symbols on the side of the police station.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 6,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 75,
+          "sanctity": 9,
+          "liberty": 3,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see an employee trying to undermine all of her boss' ideas in front of others.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 7,
+          "fairness": 0,
+          "loyalty": 13,
+          "authority": 73,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 7
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see a teaching assistant talking back to the teacher in front of the classrom.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 13,
+          "authority": 72,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 8
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see a group of women having a long and loud conversation during a church sermon.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 15,
+          "authority": 72,
+          "sanctity": 10,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a star player ignoring her coach's order to come to the bench during a game.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 0,
+          "fairness": 10,
+          "loyalty": 13,
+          "authority": 71,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a player publicly yelling at his soccer coach during a playoff game.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 7,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 69,
+          "sanctity": 3,
+          "liberty": 10,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a man secretly watching sports on his cell phone during a pastor's sermon.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 7,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 69,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 17
+        },
+        "wrongness_rating": 1.8
+      },
+      {
+        "scenario": "You see a boy turning up the TV as his father talks about his military service.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 13,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 65,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 23
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a student stating that her professor is a fool during an afternoon class.",
+        "foundation": "Authority",
+        "classifications": {
+          "care": 13,
+          "fairness": 3,
+          "loyalty": 6,
+          "authority": 65,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.0
+      },
+      {
+        "scenario": "You see a man having sex with a frozen chicken before cooking it for dinner.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 88,
+          "liberty": 3,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a very drunk woman making out with multiple strangers on the city bus.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 8,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 85,
+          "liberty": 0,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a family eating the carcass of their pet dog that had been run over.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 6,
+          "authority": 3,
+          "sanctity": 84,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see a drunk elderly man offering to have oral sex with anyone in the bar.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 6,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 6,
+          "sanctity": 84,
+          "liberty": 0,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a teenager urinating in the wave pool at a crowded amusement park.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 13,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 84,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.4
+      },
+      {
+        "scenario": "You see a man in a bar using his phone to watch people having sex with animals.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 10,
+          "fairness": 6,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 77,
+          "liberty": 0,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a teenage male in a dorm bathroom secretly using a stranger's toothbrush.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 13,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 77,
+          "liberty": 3,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see a woman having intimate relations with a recently deceased loved one.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 6,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 74,
+          "liberty": 3,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a homosexual in a gay bar offering sex to anyone who buys him a drink.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 7,
+          "sanctity": 73,
+          "liberty": 3,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see an employee at a morgue eating his pepperoni pizza off of a dead body.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 7,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 10,
+          "sanctity": 73,
+          "liberty": 0,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see a girl and her sister making out with each other just for practice.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 71,
+          "liberty": 0,
+          "not_wrong": 23
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a story about a remote tribe eating the flesh of their deceased members.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 69,
+          "liberty": 0,
+          "not_wrong": 24
+        },
+        "wrongness_rating": 2.3
+      },
+      {
+        "scenario": "You see a woman burping and farting loudly while eating at a fast food truck.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 6,
+          "sanctity": 68,
+          "liberty": 3,
+          "not_wrong": 19
+        },
+        "wrongness_rating": 2.1
+      },
+      {
+        "scenario": "You see a man searching through the trash to find women's discarded underwear.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 9,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 12,
+          "sanctity": 67,
+          "liberty": 3,
+          "not_wrong": 6
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see two first cousins getting married to each other in an elaborate wedding.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 13,
+          "sanctity": 66,
+          "liberty": 3,
+          "not_wrong": 16
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a single man ordering an inflatable sex doll that looks like his secretary.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 0,
+          "fairness": 6,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 65,
+          "liberty": 0,
+          "not_wrong": 26
+        },
+        "wrongness_rating": 1.5
+      },
+      {
+        "scenario": "You see a college student drinking until she vomits on herself and falls asleep.",
+        "foundation": "Sanctity",
+        "classifications": {
+          "care": 5,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 5,
+          "sanctity": 64,
+          "liberty": 0,
+          "not_wrong": 26
+        },
+        "wrongness_rating": 2.3
+      },
+      {
+        "scenario": "You see a man telling his fiance that she has to switch to his political party.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 90,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.9
+      },
+      {
+        "scenario": "You see a father requiring his son to become a commercial airline pilot like him.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 0,
+          "fairness": 4,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 85,
+          "not_wrong": 12
+        },
+        "wrongness_rating": 1.9
+      },
+      {
+        "scenario": "You see a man blocking his wife from leaving home or interacting with others.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 6,
+          "fairness": 6,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 84,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a manager coercing her employees into eating at her brother's diner.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 0,
+          "fairness": 10,
+          "loyalty": 3,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 77,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a man telling his girlfriend that she must convert to his religion.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 0,
+          "fairness": 13,
+          "loyalty": 3,
+          "authority": 6,
+          "sanctity": 0,
+          "liberty": 77,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 2.5
+      },
+      {
+        "scenario": "You see a mother telling her son that she is going to choose all of his friends.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 75,
+          "not_wrong": 19
+        },
+        "wrongness_rating": 2.2
+      },
+      {
+        "scenario": "You see a man forbidding his wife to wear clothing that he has not first approved.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 6,
+          "fairness": 10,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 74,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.1
+      },
+      {
+        "scenario": "You see a boss ordering an employee to revoke his citizenship in his home country.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 7,
+          "loyalty": 17,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 70,
+          "not_wrong": 0
+        },
+        "wrongness_rating": 3.3
+      },
+      {
+        "scenario": "You see a boss pressuring employees to buy goods from her family's general store.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 10,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 10,
+          "liberty": 69,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a woman pressuring her daughter to become a famous evening news anchor.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 68,
+          "not_wrong": 26
+        },
+        "wrongness_rating": 1.5
+      },
+      {
+        "scenario": "You see a public leader on TV trying to ban the wearing of hooded sweatshirts.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 19,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 65,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 2.7
+      },
+      {
+        "scenario": "You see a mother forcing her daughter to enroll as a pre-med student in college.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 10,
+          "fairness": 6,
+          "loyalty": 0,
+          "authority": 6,
+          "sanctity": 3,
+          "liberty": 65,
+          "not_wrong": 10
+        },
+        "wrongness_rating": 2.3
+      },
+      {
+        "scenario": "You see a father requiring his son to take up the family restaurant business.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 7,
+          "sanctity": 3,
+          "liberty": 62,
+          "not_wrong": 21
+        },
+        "wrongness_rating": 1.5
+      },
+      {
+        "scenario": "You see a teacher ordering a student to get a normal haircut before coming to class.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 0,
+          "fairness": 19,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 8,
+          "liberty": 62,
+          "not_wrong": 12
+        },
+        "wrongness_rating": 2.8
+      },
+      {
+        "scenario": "You see a teenager at a cafeteria forcing a younger student to pay for her lunch.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 13,
+          "fairness": 10,
+          "loyalty": 3,
+          "authority": 6,
+          "sanctity": 3,
+          "liberty": 61,
+          "not_wrong": 3
+        },
+        "wrongness_rating": 3.0
+      },
+      {
+        "scenario": "You see a mayor trying to ban people from hugging and kissing in public in his city.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 5,
+          "fairness": 8,
+          "loyalty": 3,
+          "authority": 10,
+          "sanctity": 0,
+          "liberty": 69,
+          "not_wrong": 5
+        },
+        "wrongness_rating": 3.2
+      },
+      {
+        "scenario": "You see a pastor banning his congregants from wearing bright colors in the church.",
+        "foundation": "Liberty",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 8,
+          "authority": 10,
+          "sanctity": 3,
+          "liberty": 62,
+          "not_wrong": 13
+        },
+        "wrongness_rating": 2.6
+      },
+      {
+        "scenario": "You see someone using an old rotary phone and refusing to go buy a new one.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 100
+        },
+        "wrongness_rating": 0.0
+      },
+      {
+        "scenario": "You see a man staying inside his home with the shades drawn on a rare sunny day.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 100
+        },
+        "wrongness_rating": 0.1
+      },
+      {
+        "scenario": "You see a woman drinking her entire cup of coffee using a stirring spoon.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 97
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a woman eating dessert before her main entree arrives on the table.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 97
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a woman continuing to wear a large sun hat inside her apartment complex.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 97
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see someone at the school gym lifting free weights in nice business clothes.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 4,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 96
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a man eating a bowl of cereal in the morning with water instead of milk.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 94
+        },
+        "wrongness_rating": 0.1
+      },
+      {
+        "scenario": "You see a woman using a fork to eat a bowl of vanilla ice cream and marshmallows.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 3,
+          "not_wrong": 94
+        },
+        "wrongness_rating": 0.1
+      },
+      {
+        "scenario": "You see a man putting ketchup all over his chicken Caesar salad while at lunch.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 94
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a man wearing clothes that are clearly several sizes too big for his body.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 93
+        },
+        "wrongness_rating": 0.3
+      },
+      {
+        "scenario": "You see a man walking down a dark hallway while still wearing his sunglasses.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 0,
+          "sanctity": 3,
+          "liberty": 0,
+          "not_wrong": 93
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see someone driving around in a dirty car that has not been washed recently.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 3,
+          "sanctity": 6,
+          "liberty": 0,
+          "not_wrong": 91
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a woman watching a game on television in black-and-white instead of color.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 0,
+          "fairness": 0,
+          "loyalty": 3,
+          "authority": 0,
+          "sanctity": 7,
+          "liberty": 0,
+          "not_wrong": 90
+        },
+        "wrongness_rating": 0.1
+      },
+      {
+        "scenario": "You see someone reading the ending of a spy novel before reading the beginning.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 4,
+          "fairness": 0,
+          "loyalty": 4,
+          "authority": 0,
+          "sanctity": 0,
+          "liberty": 4,
+          "not_wrong": 89
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a teenage girl wearing a long trench coat on a hot summer afternoon.",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 3,
+          "fairness": 3,
+          "loyalty": 0,
+          "authority": 6,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 88
+        },
+        "wrongness_rating": 0.2
+      },
+      {
+        "scenario": "You see a woman answering a phone call with the word \"goodbye\" instead of \"hello.\"",
+        "foundation": "Social Norms",
+        "classifications": {
+          "care": 3,
+          "fairness": 0,
+          "loyalty": 0,
+          "authority": 10,
+          "sanctity": 0,
+          "liberty": 0,
+          "not_wrong": 87
+        },
+        "wrongness_rating": 0.5
+      }
+    ]
+  }

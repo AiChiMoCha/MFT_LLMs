@@ -1,0 +1,27 @@
+name: moral-expt
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.18
+  - pytorch=2.5.1
+  - pytorch-cuda=11.8
+  - torchvision=0.20.1
+  - torchaudio=2.5.1
+  - transformers=4.48.3
+  - datasets=3.3.2
+  - accelerate=1.8.1
+  - numpy=1.24.3
+  - pandas=2.3.1
+  - matplotlib=3.10.0
+  - seaborn=0.13.2
+  - scikit-learn=1.7.0
+  - scipy=1.15.3
+  - statsmodels=0.14.5
+  - tqdm=4.67.1
+  - pyyaml=6.0.2
+  - pip=25.1
+  - pip:
+    - plotly==6.2.0

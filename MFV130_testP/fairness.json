@@ -1,0 +1,219 @@
+[
+    {
+      "scenario": "A manager named Sam has a strict 'no remote work' policy. He denies a request from a high-performing employee, Anna, to work from home. Weeks later, he grants the same privilege to another employee, Mark, because they are friends outside of work. When Anna learns this, she is morally outraged because two people in the same situation were treated differently.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Three students—Alex, Beth, and Chris—are assigned a group project. Alex and Beth work all weekend, but Chris contributes nothing. When they present the project, the professor gives all three of them an 'A.' Alex and Beth are furious because Chris received the same reward without contributing.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A private corporation buys all the land surrounding a public beach, effectively cutting off road access for local residents. Maria protests, arguing that people have a right to access the beach and that blocking it violates fairness and public rights.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A city council proposes zoning laws that allow industrial development only in low-income neighborhoods. David argues this is immoral because fair laws should not place all the burden on one group.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "After a financial scandal, the government proposes bailing out corrupt companies without jailing the executives. Sarah protests, arguing that justice and accountability are more important than economic recovery.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "During a class discussion, Ben argues that inheritance is unjust because it gives unearned advantages to rich children while poor children start with nothing.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "At a restaurant, a waiter gives excellent service to well-dressed adults while ignoring a family with children. A nearby customer is offended by the unfair treatment.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "In a community garden, one member, Tom, never helps with weeding but still takes a full share of the harvest. Other members feel this violates fairness and reciprocity.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A city government passes a law requiring a hard-to-obtain permit for protests. Activists object, saying it unfairly restricts citizens’ right to free speech.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A state debates a tax code. Maria argues that a flat tax is unfair because it burdens the poor more than the rich, and supports a progressive tax for fairness.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "After a civil war, some leaders propose amnesty for most perpetrators. Victims' groups protest, saying justice requires holding all perpetrators accountable.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Anna objects to a system where a socialite inherits a billion dollars while others are born poor, saying it is fundamentally unfair.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A professor gives a higher grade to a student he mentors for identical work compared to another student. A TA finds this unfair and morally wrong.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Four roommates share utility bills equally, but Alex uses far more water and electricity. The others are upset because he consumed more without paying more.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A new voting law requires a hard-to-obtain ID that disproportionately affects elderly and low-income citizens. Activists argue it denies equal participation rights.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A city proposes fines for unkempt lawns. A resident argues it unfairly hurts elderly and poor people who can’t maintain their yards equally.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A company offers large payments after a toxic spill but requires no criminal charges for executives. A resident refuses, saying justice matters more than money.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A student argues for high estate taxes, claiming that inherited wealth creates systemic unfairness across generations.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Two employees both miss a deadline by one day. The manager excuses his friend but disciplines the other. A coworker sees this as unjust favoritism.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A group of friends splits a dinner bill evenly. Mike orders much more than everyone else, exploiting the agreement for personal gain.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A city sells a public park to a private developer without consulting residents. The community argues they were denied their right to fair participation.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A government exempts corporations from strict water rationing while restricting residential use. A citizen argues that fair treatment requires equal burden sharing.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A mayor caught embezzling offers to build a hospital in exchange for no jail time. Some citizens object, saying fairness requires equal accountability.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Maria objects to a billionaire’s child being appointed CEO, arguing that giving power and wealth by birth is fundamentally unjust.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A teacher lets a star athlete submit late work for full credit but gives a zero to another student who missed the same deadline. A classmate finds this unfair.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Tom shares a streaming account password with others without permission, causing the original members to lose access. They see this as unfair exploitation.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A city sells its public library to a developer without community input. Residents are outraged that they were denied their right to participate in the decision.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A railway plan places tunnels in wealthy areas and noisy surface tracks in poor ones. A lawmaker argues this violates fairness by placing the burden on the poor.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A mayor’s son steals from the town’s pension fund. The mayor offers repayment if no charges are pressed. Residents argue justice demands punishment regardless.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "Alex says it’s unjust that two babies born in the same hospital—one to a billionaire and one to a poor mother—start life with vastly unequal opportunities.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A landlord rents identical apartments for different prices based on personal relationships, charging new immigrants much more. A neighbor finds this unfair.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "During an exam, Alex notices Ben cheating and getting a higher grade. Alex feels moral outrage because cheating violates fairness and equal standards.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A company closes its only wheelchair-accessible entrance, telling disabled employees to get help from coworkers. Maria argues this denies equal workplace rights.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A government’s blackout plan spares wealthy neighborhoods while cutting power to poor areas. Activists say fairness requires equal treatment for all citizens.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A CEO responsible for massive pension fraud offers to pay a large fine but avoid jail. Victims argue that fairness demands proportional punishment.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    },
+    {
+      "scenario": "A person reads about a rich heir getting a $50 million trust fund while a teacher works multiple jobs to survive. They see this as fundamentally unfair and unjust.",
+      "foundation": "Fairness",
+      "classifications": {},
+      "wrongness_rating": null
+    }
+  ]
+  

@@ -1,0 +1,57 @@
+================================================================================
+概念向量提取报告 - Persona Vector方法
+Care vs Fairness
+================================================================================
+
+模型信息:
+  - 模型名称: llama-3.1-8b-instruct
+  - 模型类型: llama
+  - 总层数: 32
+  - 目标基础: Care
+  - 对照基础: Fairness
+  - Temperature: 0.01
+  - Max new tokens: 10
+  - 输出目录: MFV130/llama-3.1-8b-instruct_care_vs_fairness_enhanced_concept_vector
+
+方法:
+  - 提取方式: 均值差 (mean_target - mean_control)
+  - 统计检验: 无（简化版）
+  - 向量数量: 160
+
+向量统计:
+  - 最强向量层: model.layers.31_residual_stream
+  - 最强向量范数: 4.6610
+  - 平均向量范数: 0.5032
+
+Top 5 最强概念向量:
+  1. model.layers.31_residual_stream
+     - L2范数: 4.6610
+     - 目标组样本: 200
+     - 对照组样本: 200
+  2. model.layers.30_residual_stream
+     - L2范数: 3.2125
+     - 目标组样本: 200
+     - 对照组样本: 200
+  3. model.layers.31.mlp.down_proj
+     - L2范数: 2.8494
+     - 目标组样本: 200
+     - 对照组样本: 200
+  4. model.layers.31.mlp
+     - L2范数: 2.8494
+     - 目标组样本: 200
+     - 对照组样本: 200
+  5. model.layers.29_residual_stream
+     - L2范数: 2.6774
+     - 目标组样本: 200
+     - 对照组样本: 200
+
+输出文件:
+  - 向量数据: MFV130/llama-3.1-8b-instruct_care_vs_fairness_enhanced_concept_vector/concept_vectors/
+  - 可视化: MFV130/llama-3.1-8b-instruct_care_vs_fairness_enhanced_concept_vector/visualizations/
+  - 详细日志: MFV130/llama-3.1-8b-instruct_care_vs_fairness_enhanced_concept_vector/detailed_logs/
+
+使用建议:
+  - 加载向量: np.load('vectors_npy/xxx_vector.npy')
+  - Steering: h = h + alpha * vector
+  - 监控: projection = activation @ vector
+  - 推荐alpha范围: 0.5 - 2.0
