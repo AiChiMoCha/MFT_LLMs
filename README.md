@@ -7,8 +7,8 @@ This project extracts concept vectors from LLMs to study how they represent diff
 The code analyzes how LLMs process moral scenarios by:
 1. Feeding the model scenarios related to different moral foundations (care, fairness, loyalty, authority, sanctity, liberty)
 2. Capturing the model's internal activations (how neurons fire)
-3. Computing concept vectors that represent the difference between two moral foundations
-4. Saving these vectors for later use in model steering or analysis
+3. Computing concept vectors that represent the difference between two moral foundations/social norms
+4. Saving these vectors for later use in model steering and projections 
 
 ## Installation
 
