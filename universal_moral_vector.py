@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 道德基础概念向量实验 - Persona Vector方法
 使用简单的均值差方法提取概念向量

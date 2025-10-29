@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 概念向量投影测试脚本 - SOTA版本 (Empirical-Distribution & Wasserstein-based)
 改进要点：
