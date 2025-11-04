@@ -1,12 +1,12 @@
 """
-概念向量投影测试脚本 - SOTA版本 (Empirical-Distribution & Wasserstein-based)
-改进要点：
-1) 以两样本 Wasserstein 距离（W-D）衡量分布可分性，替代 Cohen's d / KS-D 作为主筛选/排序指标
-2) 采用经验分布展示（直方图 + CDF），并在 CDF 上标注 Wasserstein 区域（填充表示分布偏移量）
-3) 多层同时检验时，提供 Benjamini–Hochberg (FDR) 校正的 p_adj
-4) 自适应 bin（Freedman–Diaconis）与可配置阈值 (W_min, p_max)
-5) 右下角图：-log10(p-value) 显著性趋势
-6) ⭐ 方向判定：确保 group1 在向量正方向（concept1 方向）
+Concept Vector Projection Testing Script - SOTA Version (Empirical-Distribution & Wasserstein-based)
+Key Improvements:
+1) Use two-sample Wasserstein distance (W-D) to measure distribution separability, replacing Cohen's d / KS-D as primary screening/ranking metric
+2) Adopt empirical distribution display (histogram + CDF), and mark Wasserstein area on CDF (filled region represents distribution shift)
+3) For multi-layer simultaneous testing, provide Benjamini–Hochberg (FDR) corrected p_adj
+4) Adaptive binning (Freedman–Diaconis) with configurable thresholds (W_min, p_max)
+5) Bottom-right plot: -log10(p-value) significance trend
+6) ⭐ Direction determination: ensure group1 is in the positive direction of the vector (concept1 direction)
 """
 
 import json
@@ -22,7 +22,7 @@ import argparse
 from pathlib import Path
 from typing import Tuple, Dict, Any, List
 
-# ================== 统计与工具函数 ==================
+# ================== Statistical & Utility Functions ==================
 
 try:
     from scipy.stats import wasserstein_distance, mannwhitneyu
@@ -31,7 +31,7 @@ except Exception:
     SCIPY_OK = False
 
 def freedman_diaconis_bins(x: np.ndarray, max_bins: int = 100) -> int:
-    """Freedman-Diaconis规则计算最优bin数"""
+    """Calculate optimal number of bins using Freedman-Diaconis rule"""
     x = np.asarray(x)
     x = x[np.isfinite(x)]
     n = x.size
@@ -49,13 +49,13 @@ def freedman_diaconis_bins(x: np.ndarray, max_bins: int = 100) -> int:
     return int(min(max_bins, max(10, bins)))
 
 def _ecdf(values: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-    """经验累积分布函数"""
+    """Empirical cumulative distribution function"""
     x = np.sort(values)
     y = np.arange(1, len(x) + 1) / len(x)
     return x, y
 
 def wasserstein_test(a: np.ndarray, b: np.ndarray, n_bootstrap: int = 500) -> Dict[str, Any]:
-    """两样本 Wasserstein 距离 + bootstrap p 值估计"""
+    """Two-sample Wasserstein distance + bootstrap p-value estimation"""
     a = a[np.isfinite(a)]
     b = b[np.isfinite(b)]
     if len(a) == 0 or len(b) == 0:
@@ -63,14 +63,14 @@ def wasserstein_test(a: np.ndarray, b: np.ndarray, n_bootstrap: int = 500) -> Di
     if SCIPY_OK:
         W = float(wasserstein_distance(a, b))
     else:
-        # 手动积分近似
+        # Manual integration approximation
         xa = np.sort(a)
         xb = np.sort(b)
         grid = np.linspace(min(xa.min(), xb.min()), max(xa.max(), xb.max()), 500)
         Fa = np.searchsorted(xa, grid, side="right") / len(xa)
         Fb = np.searchsorted(xb, grid, side="right") / len(xb)
         W = float(np.trapz(np.abs(Fa - Fb), grid))
-    # bootstrap 近似 p-值
+    # Bootstrap approximation of p-value
     obs = np.concatenate([a, b])
     n1 = len(a)
     rng = np.random.default_rng(42)
@@ -113,7 +113,7 @@ def auc_common_language(a: np.ndarray, b: np.ndarray) -> float:
     return float((count + 0.5 * ties) / (len(A) * len(B)))
 
 def bh_correction(pvals: List[float], alpha: float = 0.05) -> Tuple[np.ndarray, np.ndarray]:
-    """Benjamini-Hochberg FDR校正"""
+    """Benjamini-Hochberg FDR correction"""
     p = np.asarray(pvals, dtype=float)
     n = p.size
     order = np.argsort(p)
@@ -126,20 +126,20 @@ def bh_correction(pvals: List[float], alpha: float = 0.05) -> Tuple[np.ndarray, 
     reject = p_adj <= alpha
     return p_adj, reject
 
-# ================== 主类及流程 ==================
+# ================== Main Class and Workflow ==================
 
 class ProjectionTester:
-    """概念向量投影测试器"""
+    """Concept vector projection tester"""
     def __init__(self, model_path: str, vector_dir: str, device: str = "cuda"):
         self.model_path = model_path
         self.vector_dir = vector_dir
         self.device = device
         print("="*70)
-        print("初始化投影测试器 (带方向判定)")
+        print("Initializing Projection Tester (with direction determination)")
         print("="*70)
-        print(f"模型路径: {model_path}")
-        print(f"向量目录: {vector_dir}")
-        print(f"设备: {device}")
+        print(f"Model path: {model_path}")
+        print(f"Vector directory: {vector_dir}")
+        print(f"Device: {device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
@@ -148,7 +148,7 @@ class ProjectionTester:
         ).to(device)
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-        print("✅ 模型加载完成")
+        print("✅ Model loaded successfully")
         self.activations = []
         self.hook = None
 
@@ -165,12 +165,12 @@ class ProjectionTester:
                     target_file = f
                     break
         if target_file is None:
-            raise FileNotFoundError(f"找不到第{layer_idx}层的向量文件")
+            raise FileNotFoundError(f"Cannot find vector file for layer {layer_idx}")
         vector_path = os.path.join(self.vector_dir, target_file)
-        print(f"  加载向量: {target_file}")
+        print(f"  Loading vector: {target_file}")
         vector = np.load(vector_path)
         vector_tensor = torch.tensor(vector, dtype=torch.float32 if self.device == "cpu" else torch.float16).to(self.device)
-        print(f"  向量维度: {vector_tensor.shape[0]}, 范数: {torch.norm(vector_tensor.float()).item():.4f}")
+        print(f"  Vector dimension: {vector_tensor.shape[0]}, norm: {torch.norm(vector_tensor.float()).item():.4f}")
         return vector_tensor, target_file
 
     def _hook_fn(self, module, input, output):
@@ -183,7 +183,7 @@ class ProjectionTester:
         self.hook = target_module.register_forward_hook(self._hook_fn)
         self.activations = []
         projections = []
-        print(f"  计算 {len(texts)} 条文本的 projection（层 {layer_idx}）…")
+        print(f"  Computing projections for {len(texts)} texts (layer {layer_idx})...")
         for text in tqdm(texts, desc=f"Layer {layer_idx}", ncols=80):
             inputs = self.tokenizer(text, return_tensors="pt", truncation=True, max_length=512).to(self.device)
             with torch.no_grad():
@@ -196,7 +196,7 @@ class ProjectionTester:
         return np.array(projections)
 
 def extract_vector_name(vector_dir: str) -> str:
-    """从向量目录路径中提取向量名称"""
+    """Extract vector name from vector directory path"""
     path_parts = Path(vector_dir).parts
     for part in reversed(path_parts):
         if '_vs_' in part.lower():
@@ -210,7 +210,7 @@ def extract_vector_name(vector_dir: str) -> str:
     return Path(vector_dir).parent.name
 
 def create_output_directory(vector_dir: str, g1: str, g2: str, base_dir: str = "./projection_results") -> str:
-    """创建智能命名的输出目录"""
+    """Create intelligently named output directory"""
     vn = extract_vector_name(vector_dir)
     ts = datetime.now().strftime('%Y%m%d_%H%M%S')
     dn = f"{g1.lower()}_vs_{g2.lower()}_{ts}"
@@ -221,22 +221,22 @@ def create_output_directory(vector_dir: str, g1: str, g2: str, base_dir: str = "
     return od
 
 def load_json_scenarios(json_path: str) -> List[str]:
-    """加载JSON格式的测试数据"""
+    """Load test data in JSON format"""
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return [item['scenario'] for item in data]
 
 def calculate_statistics(g1: np.ndarray, g2: np.ndarray) -> Dict[str, Any]:
-    """计算统计量：Wasserstein、Cohen's d、median、IQR、方向等
+    """Calculate statistics: Wasserstein, Cohen's d, median, IQR, direction, etc.
     
-    ⭐ 新增方向判定：
-    - 计算 g1 和 g2 的中位数/均值
-    - 判断 g1 是否在 g2 的右侧（正向）
+    ⭐ New direction determination:
+    - Calculate median/mean of g1 and g2
+    - Determine if g1 is on the right side (positive direction) of g2
     """
     wass = wasserstein_test(g1, g2, n_bootstrap=500)
     auc = auc_common_language(g1, g2)
     
-    # 计算均值和中位数
+    # Calculate mean and median
     g1_mean = g1.mean()
     g2_mean = g2.mean()
     g1_median = np.median(g1)
@@ -248,16 +248,16 @@ def calculate_statistics(g1: np.ndarray, g2: np.ndarray) -> Dict[str, Any]:
     pooled = np.sqrt((g1.std()**2 + g2.std()**2) / 2)
     cohen_d = mean_diff / pooled if pooled > 0 else 0.0
     
-    # ⭐ 方向判定
-    # 正确方向: group1 应该在 group2 的右侧（正方向）
-    # 即: median(g1) > median(g2) 或 mean(g1) > mean(g2)
+    # ⭐ Direction determination
+    # Correct direction: group1 should be on the right side (positive direction) of group2
+    # i.e.: median(g1) > median(g2) or mean(g1) > mean(g2)
     correct_direction_median = g1_median > g2_median
     correct_direction_mean = g1_mean > g2_mean
     
-    # 综合判定：优先用中位数（更稳健），如果中位数一致则看均值
-    if abs(median_diff) > 1e-6:  # 中位数有差异
+    # Combined determination: prioritize median (more robust), if median is the same then look at mean
+    if abs(median_diff) > 1e-6:  # Median has difference
         correct_direction = correct_direction_median
-    else:  # 中位数几乎一致，看均值
+    else:  # Median almost the same, look at mean
         correct_direction = correct_direction_mean
     
     q1_g1, q3_g1 = np.percentile(g1, [25, 75])
@@ -311,7 +311,7 @@ def calculate_statistics(g1: np.ndarray, g2: np.ndarray) -> Dict[str, Any]:
 def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: int,
                                      save_path: str, g1_name: str, g2_name: str, 
                                      wass_info: Dict[str, float], direction_info: Dict[str, Any]):
-    """单层详细可视化：empirical distribution + CDF + Wasserstein area + 方向标注"""
+    """Single layer detailed visualization: empirical distribution + CDF + Wasserstein area + direction annotation"""
     fig = plt.figure(figsize=(16, 12))
     gs = fig.add_gridspec(3, 2, hspace=0.35, wspace=0.3)
     
@@ -320,7 +320,7 @@ def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: 
     correct_dir = direction_info['correct_direction']
     median_diff = direction_info['median_diff']
     
-    # 标题带方向信息
+    # Title with direction information
     dir_symbol = "✅" if correct_dir else "❌"
     dir_text = f"Direction: {dir_symbol} {'Correct' if correct_dir else 'WRONG'}"
     
@@ -331,7 +331,7 @@ def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: 
     min_val, max_val = all_data.min(), all_data.max()
     margin = (max_val - min_val)*0.1
     
-    # ===== 1. 主图：Empirical Distribution =====
+    # ===== 1. Main plot: Empirical Distribution =====
     ax_main = fig.add_subplot(gs[0, :])
     n_bins = freedman_diaconis_bins(all_data)
     bins = np.linspace(min_val-margin, max_val+margin, n_bins)
@@ -347,7 +347,7 @@ def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: 
     arrow_y = y_max * 0.92
     text_y = y_max * 0.98
     
-    # 方向箭头和标注
+    # Direction arrows and annotations
     ax_main.annotate('', xy=(min_val-margin*0.5, arrow_y),
                     xytext=(min_val+(max_val-min_val)*0.35, arrow_y),
                     arrowprops=dict(arrowstyle='<-', lw=3, color='#CC6633'))
@@ -363,7 +363,7 @@ def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: 
     ax_main.set_xlabel('Projection Value', fontsize=13, fontweight='bold')
     ax_main.set_ylabel('Frequency (Count)', fontsize=13, fontweight='bold')
     
-    # 标题中加入方向判定结果
+    # Add direction determination result to title
     title_color = 'green' if correct_dir else 'red'
     ax_main.set_title(f"Empirical Distribution | {dir_text}", 
                      fontsize=14, fontweight='bold', pad=20, color=title_color)
@@ -373,7 +373,7 @@ def visualize_single_layer_empirical(g1: np.ndarray, g2: np.ndarray, layer_idx: 
     ax_main.spines['top'].set_visible(False)
     ax_main.spines['right'].set_visible(False)
 
-    # ===== 2. 归一化直方图 =====
+    # ===== 2. Normalized histogram =====
     ax2 = fig.add_subplot(gs[1, 0])
     ax2.hist(g2, bins=bins, alpha=0.7, label=g2_name, color='#FF9966', edgecolor='white', density=True, linewidth=0.5)
     ax2.hist(g1, bins=bins, alpha=0.7, label=g1_name, color='#6699CC', edgecolor='white', density=True, linewidth=0.5)
@@ -462,11 +462,11 @@ Direction Check:
     
     plt.savefig(save_path, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
-    print(f"    ✅ 可视化保存: {save_path}")
+    print(f"    ✅ Visualization saved: {save_path}")
 
 def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
                                  save_path: str, group1_name: str, group2_name: str):
-    """汇总图：四个子图，右下角显示 -log10(p-value)"""
+    """Summary plot: four subplots, bottom-right showing -log10(p-value)"""
     layers = sorted(all_results.keys())
     W_ds = [all_results[l]['statistics']['wass']['D'] for l in layers]
     pvals = [all_results[l]['statistics']['wass']['p'] for l in layers]
@@ -474,16 +474,16 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     g2_means = [all_results[l]['statistics']['group2']['mean'] for l in layers]
     mean_diffs = [all_results[l]['statistics']['separation']['mean_difference'] for l in layers]
     
-    # 方向信息
+    # Direction information
     correct_dirs = [all_results[l]['statistics']['direction']['correct_direction'] for l in layers]
 
     fig, axes = plt.subplots(2, 2, figsize=(16, 12))
     fig.suptitle(f'All Layers Summary: {group1_name} vs {group2_name} Projection', 
                  fontsize=16, fontweight='bold')
 
-    # ===== 1. 左上：Wasserstein D 趋势（带方向标记） =====
+    # ===== 1. Top-left: Wasserstein D trend (with direction markers) =====
     ax1 = axes[0, 0]
-    # 根据方向正确性设置颜色
+    # Set colors based on direction correctness
     colors_wd = ['#2E7D32' if cd else '#D32F2F' for cd in correct_dirs]
     for i, (layer, wd, color) in enumerate(zip(layers, W_ds, colors_wd)):
         ax1.plot(layer, wd, marker='o', markersize=8, color=color, 
@@ -498,7 +498,7 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
 
-    # ===== 2. 右上：均值趋势 =====
+    # ===== 2. Top-right: Mean trends =====
     ax2 = axes[0, 1]
     ax2.plot(layers, g1_means, marker='o', linewidth=2, markersize=6, 
             color='#336699', label=group1_name)
@@ -513,17 +513,17 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     ax2.spines['top'].set_visible(False)
     ax2.spines['right'].set_visible(False)
 
-    # ===== 3. 左下：均值差（带方向标记） =====
+    # ===== 3. Bottom-left: Mean difference (with direction markers) =====
     ax3 = axes[1, 0]
-    # 根据方向正确性和均值差的符号设置颜色
+    # Set colors based on direction correctness and sign of mean difference
     colors_diff = []
     for cd, md in zip(correct_dirs, mean_diffs):
         if cd and md > 0:
-            colors_diff.append('#2E7D32')  # 正确且正向：绿色
+            colors_diff.append('#2E7D32')  # Correct and positive: green
         elif not cd and md < 0:
-            colors_diff.append('#D32F2F')  # 错误且负向：红色
+            colors_diff.append('#D32F2F')  # Wrong and negative: red
         else:
-            colors_diff.append('#FF9800')  # 其他情况：橙色
+            colors_diff.append('#FF9800')  # Other cases: orange
     
     bars = ax3.bar(layers, mean_diffs, alpha=0.7, edgecolor='black', linewidth=0.8, color=colors_diff)
     ax3.axhline(0, color='gray', linestyle=':', linewidth=2, alpha=0.5)
@@ -535,7 +535,7 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     ax3.spines['top'].set_visible(False)
     ax3.spines['right'].set_visible(False)
 
-    # ===== 4. 右下：-log10(p-value) 显著性趋势 =====
+    # ===== 4. Bottom-right: -log10(p-value) significance trend =====
     ax4 = axes[1, 1]
     
     min_p = 1e-10
@@ -546,16 +546,16 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
         else:
             log_pvals.append(-np.log10(max(p, min_p)))
     
-    # 颜色编码（结合方向判定）
+    # Color coding (combined with direction determination)
     colors = []
     for lp, cd in zip(log_pvals, correct_dirs):
-        if not cd:  # 方向错误
-            colors.append('red')  # 不管显著性如何，方向错就是红色
-        elif lp >= 1.3:  # 显著且方向正确
+        if not cd:  # Wrong direction
+            colors.append('red')  # Red regardless of significance
+        elif lp >= 1.3:  # Significant and correct direction
             colors.append('green')
-        elif lp >= 1.0:  # 接近显著且方向正确
+        elif lp >= 1.0:  # Nearly significant and correct direction
             colors.append('orange')
-        else:  # 不显著
+        else:  # Not significant
             colors.append('lightcoral')
     
     bars = ax4.bar(layers, log_pvals, alpha=0.75, edgecolor='black', 
@@ -566,7 +566,7 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     ax4.axhline(y=1.0, color='darkorange', linestyle=':', linewidth=1.5, 
                label='p = 0.1', alpha=0.5)
     
-    # 标注最显著的几个层（只标注方向正确的）
+    # Annotate the most significant layers (only those with correct direction)
     top_n = 5
     valid_indices = [i for i, cd in enumerate(correct_dirs) if cd]
     if valid_indices:
@@ -592,11 +592,11 @@ def visualize_all_layers_summary(all_results: Dict[int,Dict[str,Any]],
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.close()
-    print(f"  ✅ 汇总图保存: {save_path}")
+    print(f"  ✅ Summary plot saved: {save_path}")
 
 def generate_report(all_results: Dict[int,Dict[str,Any]], output_dir: str,
                     group1_name: str, group2_name: str, args: argparse.Namespace):
-    """生成测试报告（带BH校正和方向判定）"""
+    """Generate test report (with BH correction and direction determination)"""
     layers = sorted(all_results.keys())
     pvals = [all_results[l]['statistics']['wass']['p'] for l in layers]
     p_adj, reject = bh_correction(pvals, alpha=args.bh_alpha)
@@ -607,28 +607,28 @@ def generate_report(all_results: Dict[int,Dict[str,Any]], output_dir: str,
 
     report_lines = []
     report_lines.append("="*100)
-    report_lines.append(f"{group1_name} vs {group2_name} 概念向量投影测试报告（Wasserstein-based + 方向判定）")
-    report_lines.append(f"生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    report_lines.append(f"{group1_name} vs {group2_name} Concept Vector Projection Test Report (Wasserstein-based + Direction Determination)")
+    report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     report_lines.append("="*100)
     
-    report_lines.append("\n【测试配置】")
-    report_lines.append(f"模型: {args.model_path}")
-    report_lines.append(f"向量目录: {args.vector_path}")
-    report_lines.append(f"测试数据1: {args.test_file1} ({group1_name})")
-    report_lines.append(f"测试数据2: {args.test_file2} ({group2_name})")
-    report_lines.append(f"测试层: {layers}")
-    report_lines.append(f"Wasserstein判定: D>={args.wass_d_min} 且 p<={args.wass_p_max}")
-    report_lines.append(f"方向判定: {group1_name} 应在 {group2_name} 的正方向（右侧）")
-    report_lines.append(f"多重校正: BH-FDR α={args.bh_alpha}")
-    report_lines.append(f"输出目录: {output_dir}")
+    report_lines.append("\n[Test Configuration]")
+    report_lines.append(f"Model: {args.model_path}")
+    report_lines.append(f"Vector directory: {args.vector_path}")
+    report_lines.append(f"Test data 1: {args.test_file1} ({group1_name})")
+    report_lines.append(f"Test data 2: {args.test_file2} ({group2_name})")
+    report_lines.append(f"Test layers: {layers}")
+    report_lines.append(f"Wasserstein criteria: D>={args.wass_d_min} and p<={args.wass_p_max}")
+    report_lines.append(f"Direction criteria: {group1_name} should be in positive direction (right side) of {group2_name}")
+    report_lines.append(f"Multiple testing correction: BH-FDR α={args.bh_alpha}")
+    report_lines.append(f"Output directory: {output_dir}")
     
-    report_lines.append("\n【方向判定说明】")
-    report_lines.append(f"向量定义: {group1_name} - {group2_name}")
-    report_lines.append(f"预期: median({group1_name}) > median({group2_name})")
-    report_lines.append(f"判定: 如果方向错误（{group1_name}在左侧），该层标记为 FAIL")
+    report_lines.append("\n[Direction Determination Explanation]")
+    report_lines.append(f"Vector definition: {group1_name} - {group2_name}")
+    report_lines.append(f"Expected: median({group1_name}) > median({group2_name})")
+    report_lines.append(f"Determination: If direction is wrong ({group1_name} on left side), layer is marked as FAIL")
     
-    report_lines.append("\n【各层结果（⭐ 新增方向列）】")
-    header = f"\n{'层':<6}{'W-D':>10}{'p':>14}{'p_adj':>14}{'-log10(p)':>12}{'方向':>8}{'综合判定':>12}"
+    report_lines.append("\n[Results by Layer (⭐ Direction column added)]")
+    header = f"\n{'Layer':<6}{'W-D':>10}{'p':>14}{'p_adj':>14}{'-log10(p)':>12}{'Direction':>10}{'Overall':>12}"
     report_lines.append(header)
     report_lines.append("-"*100)
     
@@ -640,32 +640,32 @@ def generate_report(all_results: Dict[int,Dict[str,Any]], output_dir: str,
         padj = st['wass']['p_adj']
         log_p = -np.log10(max(p, 1e-10)) if p > 0 else 10.0
         
-        # 方向判定
+        # Direction determination
         correct_dir = st['direction']['correct_direction']
         dir_symbol = "✅" if correct_dir else "❌"
         
-        # ⭐ 综合判定：必须同时满足分离度、显著性和方向
+        # ⭐ Overall determination: must satisfy both separation and direction
         separation_ok = (D >= args.wass_d_min) and (p <= args.wass_p_max)
         direction_ok = correct_dir
         
-        # 只有两者都满足才 PASS
+        # Only PASS if both are satisfied
         ok = separation_ok and direction_ok
         
         if separation_ok and not direction_ok:
-            flag = "FAIL(DIR)"  # 分离度够，但方向错
+            flag = "FAIL(DIR)"  # Good separation, but wrong direction
         elif not separation_ok and direction_ok:
-            flag = "FAIL(SEP)"  # 方向对，但分离度不够
+            flag = "FAIL(SEP)"  # Correct direction, but insufficient separation
         elif not separation_ok and not direction_ok:
-            flag = "FAIL(BOTH)" # 都不满足
+            flag = "FAIL(BOTH)" # Both fail
         else:
-            flag = "PASS"       # 都满足
+            flag = "PASS"       # Both satisfied
         
         if ok:
             passed_layers.append(l)
         
-        report_lines.append(f"{l:<6}{D:>10.3f}{p:>14.1e}{padj:>14.1e}{log_p:>12.2f}{dir_symbol:>8}{flag:>12}")
+        report_lines.append(f"{l:<6}{D:>10.3f}{p:>14.1e}{padj:>14.1e}{log_p:>12.2f}{dir_symbol:>10}{flag:>12}")
     
-    # 最佳层（只在方向正确的层中选择）
+    # Best layer (select only from layers with correct direction)
     correct_dir_layers = [l for l in layers if all_results[l]['statistics']['direction']['correct_direction']]
     
     if correct_dir_layers:
@@ -674,28 +674,28 @@ def generate_report(all_results: Dict[int,Dict[str,Any]], output_dir: str,
         best_p = all_results[best_layer]['statistics']['wass']['p']
         best_log_p = -np.log10(max(best_p, 1e-10)) if best_p > 0 else 10.0
         
-        report_lines.append(f"\n🏆 最佳层(按W-D, 仅方向正确): 第 {best_layer} 层")
+        report_lines.append(f"\n🏆 Best layer (by W-D, correct direction only): Layer {best_layer}")
         report_lines.append(f"   W-D = {best_D:.3f}, p = {best_p:.1e}, -log10(p) = {best_log_p:.2f}")
     else:
-        report_lines.append(f"\n⚠️ 警告: 没有方向正确的层！")
-        report_lines.append(f"   这可能表示：")
-        report_lines.append(f"   1. 向量方向定义错误（{group1_name} - {group2_name} vs 实际训练）")
-        report_lines.append(f"   2. 测试数据与向量训练数据不匹配")
-        report_lines.append(f"   3. 概念向量未能有效捕获概念差异")
+        report_lines.append(f"\n⚠️ Warning: No layers with correct direction!")
+        report_lines.append(f"   This may indicate:")
+        report_lines.append(f"   1. Vector direction definition is wrong ({group1_name} - {group2_name} vs actual training)")
+        report_lines.append(f"   2. Test data does not match vector training data")
+        report_lines.append(f"   3. Concept vector failed to effectively capture conceptual difference")
     
-    report_lines.append(f"\n✅ 通过综合判定的层数: {len(passed_layers)}/{len(layers)}")
+    report_lines.append(f"\n✅ Layers passing overall criteria: {len(passed_layers)}/{len(layers)}")
     if passed_layers:
-        report_lines.append(f"   层号: {passed_layers}")
+        report_lines.append(f"   Layer indices: {passed_layers}")
     
-    # 方向统计
+    # Direction statistics
     n_correct = sum(1 for l in layers if all_results[l]['statistics']['direction']['correct_direction'])
     n_wrong = len(layers) - n_correct
-    report_lines.append(f"\n📊 方向统计:")
-    report_lines.append(f"   方向正确: {n_correct}/{len(layers)} ({100*n_correct/len(layers):.1f}%)")
-    report_lines.append(f"   方向错误: {n_wrong}/{len(layers)} ({100*n_wrong/len(layers):.1f}%)")
+    report_lines.append(f"\n📊 Direction Statistics:")
+    report_lines.append(f"   Correct direction: {n_correct}/{len(layers)} ({100*n_correct/len(layers):.1f}%)")
+    report_lines.append(f"   Wrong direction: {n_wrong}/{len(layers)} ({100*n_wrong/len(layers):.1f}%)")
     
     if n_wrong > n_correct:
-        report_lines.append(f"\n⚠️ 警告: 多数层方向错误！请检查向量定义和测试数据是否匹配。")
+        report_lines.append(f"\n⚠️ Warning: Majority of layers have wrong direction! Please check if vector definition and test data match.")
     
     report_lines.append("\n" + "="*100)
     
@@ -705,38 +705,38 @@ def generate_report(all_results: Dict[int,Dict[str,Any]], output_dir: str,
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='概念向量投影测试工具 - SOTA版（Wasserstein + 方向判定）',
+        description='Concept Vector Projection Testing Tool - SOTA Version (Wasserstein + Direction Determination)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-示例:
+Example:
   python %(prog)s --model_path /path/to/model --vector_path /path/to/vectors \\
       --test_file1 group1.json --test_file2 group2.json \\
       --wass_d_min 0.3 --wass_p_max 0.05
 
-方向判定说明:
-  向量定义为 concept1 - concept2 时:
-  - test_file1 应该是 concept1 的数据
-  - test_file2 应该是 concept2 的数据
-  - 正确方向: median(group1) > median(group2)
+Direction Determination Explanation:
+  When vector is defined as concept1 - concept2:
+  - test_file1 should be concept1 data
+  - test_file2 should be concept2 data
+  - Correct direction: median(group1) > median(group2)
   
-  例如: authority_vs_social_norms 向量
+  For example: authority_vs_social_norms vector
   - test_file1 = authority.json
   - test_file2 = social_norm.json
-  - 期望: authority projection > social_norm projection
+  - Expected: authority projection > social_norm projection
         """
     )
-    parser.add_argument('--model_path', type=str, required=True, help='模型路径')
-    parser.add_argument('--vector_path', type=str, required=True, help='向量目录路径')
-    parser.add_argument('--test_file1', type=str, required=True, help='第一组测试数据')
-    parser.add_argument('--test_file2', type=str, required=True, help='第二组测试数据')
+    parser.add_argument('--model_path', type=str, required=True, help='Model path')
+    parser.add_argument('--vector_path', type=str, required=True, help='Vector directory path')
+    parser.add_argument('--test_file1', type=str, required=True, help='First test data group')
+    parser.add_argument('--test_file2', type=str, required=True, help='Second test data group')
     parser.add_argument('--device', type=str, default='auto', choices=['auto','cuda','cpu'], 
-                       help='运行设备')
+                       help='Device to run on')
     parser.add_argument('--wass_d_min', type=float, default=0.5, 
-                       help='单层判定的最小 Wasserstein-D（默认：0.5）')
+                       help='Minimum Wasserstein-D for single layer determination (default: 0.5)')
     parser.add_argument('--wass_p_max', type=float, default=0.01, 
-                       help='单层判定的最大 p 值（默认：0.01）')
+                       help='Maximum p-value for single layer determination (default: 0.01)')
     parser.add_argument('--bh_alpha', type=float, default=0.05, 
-                       help='多重假设检验 FDR α（默认：0.05）')
+                       help='FDR α for multiple hypothesis testing (default: 0.05)')
     return parser.parse_args()
 
 def main():
@@ -752,28 +752,28 @@ def main():
                                         base_dir="./projection_results")
     
     print(f"\n{'='*70}")
-    print(f"{g1_name} vs {g2_name} 概念向量投影测试（Wasserstein + 方向判定）")
-    print(f"模型: {args.model_path}")
-    print(f"向量目录: {args.vector_path}")
-    print(f"数据1: {args.test_file1} ({g1_name})")
-    print(f"数据2: {args.test_file2} ({g2_name})")
-    print(f"设备: {device}")
-    print(f"输出目录: {output_dir}")
-    print(f"判定: W-D>={args.wass_d_min}, p<={args.wass_p_max}")
-    print(f"⭐ 方向: {g1_name} 应在 {g2_name} 的正方向（右侧）")
+    print(f"{g1_name} vs {g2_name} Concept Vector Projection Test (Wasserstein + Direction Determination)")
+    print(f"Model: {args.model_path}")
+    print(f"Vector directory: {args.vector_path}")
+    print(f"Data 1: {args.test_file1} ({g1_name})")
+    print(f"Data 2: {args.test_file2} ({g2_name})")
+    print(f"Device: {device}")
+    print(f"Output directory: {output_dir}")
+    print(f"Criteria: W-D>={args.wass_d_min}, p<={args.wass_p_max}")
+    print(f"⭐ Direction: {g1_name} should be in positive direction (right side) of {g2_name}")
     print(f"{'='*70}\n")
     
     g1_texts = load_json_scenarios(args.test_file1)
     g2_texts = load_json_scenarios(args.test_file2)
-    print(f"  ✅ {g1_name} 条数: {len(g1_texts)}")
-    print(f"  ✅ {g2_name} 条数: {len(g2_texts)}")
+    print(f"  ✅ {g1_name} count: {len(g1_texts)}")
+    print(f"  ✅ {g2_name} count: {len(g2_texts)}")
     
     tester = ProjectionTester(args.model_path, args.vector_path, device)
     
     all_results: Dict[int, Dict[str, Any]] = {}
     for layer_idx in range(32):
         print(f"\n{'='*70}")
-        print(f"测试第 {layer_idx} 层")
+        print(f"Testing Layer {layer_idx}")
         print(f"{'='*70}")
         
         try:
@@ -788,14 +788,14 @@ def main():
         stats = calculate_statistics(g1_proj, g2_proj)
         all_results[layer_idx] = {'statistics': stats}
         
-        # 打印方向信息
+        # Print direction information
         dir_info = stats['direction']
         dir_symbol = "✅" if dir_info['correct_direction'] else "❌"
-        print(f"\n  结果:")
+        print(f"\n  Results:")
         print(f"    W-D = {stats['wass']['D']:.3f}, p = {stats['wass']['p']:.1e}")
         print(f"    {g1_name} median = {stats['group1']['median']:.4f}")
         print(f"    {g2_name} median = {stats['group2']['median']:.4f}")
-        print(f"    方向判定: {dir_symbol} {'正确' if dir_info['correct_direction'] else '错误'}")
+        print(f"    Direction: {dir_symbol} {'Correct' if dir_info['correct_direction'] else 'Wrong'}")
         
         vis_path = os.path.join(output_dir, "visualizations", f"layer_{layer_idx}_detail.png")
         visualize_single_layer_empirical(g1_proj, g2_proj, layer_idx, vis_path, 
@@ -806,7 +806,7 @@ def main():
     
     if len(all_results) > 0:
         print(f"\n{'='*70}")
-        print("生成汇总可视化")
+        print("Generating summary visualization")
         print(f"{'='*70}")
         summary_path = os.path.join(output_dir, "visualizations", "all_layers_summary.png")
         visualize_all_layers_summary(all_results, summary_path, g1_name, g2_name)
@@ -818,22 +818,22 @@ def main():
     stats_path = os.path.join(output_dir, "statistics.json")
     with open(stats_path, 'w', encoding='utf-8') as f:
         json.dump(stats_data, f, indent=2, ensure_ascii=False)
-    print(f"\n✅ 统计数据保存: {stats_path}")
+    print(f"\n✅ Statistics saved: {stats_path}")
     
     print(f"\n{'='*70}")
-    print("生成测试报告")
+    print("Generating test report")
     print(f"{'='*70}")
     generate_report(all_results, output_dir, g1_name, g2_name, args)
     
     print(f"\n{'='*70}")
-    print("✅ 所有测试完成！")
+    print("✅ All tests completed!")
     print(f"{'='*70}")
-    print(f"\n所有结果保存在: {output_dir}/")
-    print(f"  - 测试报告: test_report.txt (⭐ 包含方向判定)")
-    print(f"  - 统计数据: statistics.json")
-    print(f"  - 汇总图: visualizations/all_layers_summary.png (⭐ 方向标记)")
-    print(f"  - 详细图: visualizations/layer_*_detail.png (⭐ 方向状态)")
-    print(f"  - 原始数据: projections/")
+    print(f"\nAll results saved in: {output_dir}/")
+    print(f"  - Test report: test_report.txt (⭐ includes direction determination)")
+    print(f"  - Statistics: statistics.json")
+    print(f"  - Summary plot: visualizations/all_layers_summary.png (⭐ direction markers)")
+    print(f"  - Detail plots: visualizations/layer_*_detail.png (⭐ direction status)")
+    print(f"  - Raw data: projections/")
 
 if __name__ == "__main__":
     main()

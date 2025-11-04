@@ -1,57 +1,57 @@
 ================================================================================
-概念向量提取报告 - Persona Vector方法
+Concept Vector Extraction Report - Persona Vector Method
 Care vs Loyalty
 ================================================================================
 
-模型信息:
-  - 模型名称: llama-3.1-8b-instruct
-  - 模型类型: llama
-  - 总层数: 32
-  - 目标基础: Care
-  - 对照基础: Loyalty
+Model Information:
+  - Model name: llama-3.1-8b-instruct
+  - Model type: llama
+  - Total layers: 32
+  - Target foundation: Care
+  - Control foundation: Loyalty
   - Temperature: 0.01
   - Max new tokens: 10
-  - 输出目录: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector
+  - Output directory: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector
 
-方法:
-  - 提取方式: 均值差 (mean_target - mean_control)
-  - 统计检验: 无（简化版）
-  - 向量数量: 160
+Method:
+  - Extraction method: Mean difference (mean_target - mean_control)
+  - Statistical testing: None (simplified version)
+  - Number of vectors: 160
 
-向量统计:
-  - 最强向量层: model.layers.31_residual_stream
-  - 最强向量范数: 6.0765
-  - 平均向量范数: 0.6887
+Vector Statistics:
+  - Strongest vector layer: model.layers.31_residual_stream
+  - Strongest vector norm: 6.0765
+  - Average vector norm: 0.6887
 
-Top 5 最强概念向量:
+Top 5 Strongest Concept Vectors:
   1. model.layers.31_residual_stream
-     - L2范数: 6.0765
-     - 目标组样本: 200
-     - 对照组样本: 200
+     - L2 norm: 6.0765
+     - Target group samples: 200
+     - Control group samples: 200
   2. model.layers.30_residual_stream
-     - L2范数: 4.5929
-     - 目标组样本: 200
-     - 对照组样本: 200
+     - L2 norm: 4.5929
+     - Target group samples: 200
+     - Control group samples: 200
   3. model.layers.29_residual_stream
-     - L2范数: 3.8196
-     - 目标组样本: 200
-     - 对照组样本: 200
+     - L2 norm: 3.8196
+     - Target group samples: 200
+     - Control group samples: 200
   4. model.layers.31.mlp.down_proj
-     - L2范数: 3.7437
-     - 目标组样本: 200
-     - 对照组样本: 200
+     - L2 norm: 3.7437
+     - Target group samples: 200
+     - Control group samples: 200
   5. model.layers.31.mlp
-     - L2范数: 3.7437
-     - 目标组样本: 200
-     - 对照组样本: 200
+     - L2 norm: 3.7437
+     - Target group samples: 200
+     - Control group samples: 200
 
-输出文件:
-  - 向量数据: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/concept_vectors/
-  - 可视化: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/visualizations/
-  - 详细日志: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/detailed_logs/
+Output Files:
+  - Vector data: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/concept_vectors/
+  - Visualizations: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/visualizations/
+  - Detailed logs: MFV130/llama-3.1-8b-instruct_care_vs_loyalty_enhanced_concept_vector/detailed_logs/
 
-使用建议:
-  - 加载向量: np.load('vectors_npy/xxx_vector.npy')
+Usage Recommendations:
+  - Load vector: np.load('vectors_npy/xxx_vector.npy')
   - Steering: h = h + alpha * vector
-  - 监控: projection = activation @ vector
-  - 推荐alpha范围: 0.5 - 2.0
+  - Monitoring: projection = activation @ vector
+  - Recommended alpha range: 0.5 - 2.0

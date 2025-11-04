@@ -1,8 +1,8 @@
 """
-道德基础概念向量实验 - Persona Vector方法
-使用简单的均值差方法提取概念向量
+Moral Foundations Concept Vector Experiment - Persona Vector Method
+Uses simple mean difference method to extract concept vectors
 
-使用方法：
+Usage:
 python concept_vector_experiment.py --model_name mistral-7b-instruct \
     --model_path /path/to/model --target_foundation fairness \
     --control_foundation care
@@ -30,7 +30,7 @@ warnings.filterwarnings('ignore')
 
 
 class ConceptVectorExperiment:
-    """概念向量实验类 - 使用Persona Vector的简单均值差方法"""
+    """Concept Vector Experiment Class - Using Persona Vector's simple mean difference method"""
     
     def __init__(self, 
                  target_foundation: str = "fairness",
@@ -85,7 +85,7 @@ class ConceptVectorExperiment:
         print(f"Output directory: {self.output_dir}")
         
     def _setup_output_directory(self) -> str:
-        """设置输出目录"""
+        """Setup output directory"""
         if self.target_foundation == self.control_foundation:
             base_name = f"{self.model_name}_{self.target_foundation}_self_control"
         else:
@@ -94,35 +94,35 @@ class ConceptVectorExperiment:
         if self.enhanced_monitoring:
             base_name += "_enhanced"
         
-        base_name += "_concept_vector"  # 标记使用concept vector方法
+        base_name += "_concept_vector"  # Mark as using concept vector method
             
         output_dir = f"MFV130/{base_name}"
         os.makedirs(output_dir, exist_ok=True)
         
-        # 创建子文件夹
+        # Create subdirectories
         os.makedirs(f"{output_dir}/detailed_logs", exist_ok=True)
         os.makedirs(f"{output_dir}/visualizations", exist_ok=True)
-        os.makedirs(f"{output_dir}/concept_vectors", exist_ok=True)  # 新增：保存向量
+        os.makedirs(f"{output_dir}/concept_vectors", exist_ok=True)  # New: for saving vectors
         
         return output_dir
         
     def _check_model_compatibility(self):
-        """检查模型兼容性"""
+        """Check model compatibility"""
         try:
-            print(f"检查模型兼容性: {self.model_path}")
+            print(f"Checking model compatibility: {self.model_path}")
             self.model_config = AutoConfig.from_pretrained(self.model_path)
             self.total_layers = self.model_config.num_hidden_layers
             
-            print(f"  模型类型: {self.model_config.model_type}")
-            print(f"  隐藏层数: {self.total_layers}")
-            print(f"  隐藏维度: {self.model_config.hidden_size}")
+            print(f"  Model type: {self.model_config.model_type}")
+            print(f"  Hidden layers: {self.total_layers}")
+            print(f"  Hidden dimension: {self.model_config.hidden_size}")
             return True
         except Exception as e:
-            print(f"❌ 模型兼容性检查失败: {e}")
+            print(f"❌ Model compatibility check failed: {e}")
             return False
             
     def _configure_monitoring_layers(self) -> List[int]:
-        """配置监控层"""
+        """Configure monitoring layers"""
         if self.total_layers is None:
             total_layers = 32
         else:
@@ -149,7 +149,7 @@ class ConceptVectorExperiment:
         return layers
         
     def load_model(self):
-        """加载模型"""
+        """Load model"""
         print(f"Loading {self.model_name} from {self.model_path}...")
         
         if not self._check_model_compatibility():
@@ -170,7 +170,7 @@ class ConceptVectorExperiment:
         print("Model loaded successfully!")
     
     def load_moral_scenarios(self, json_path: str, unrelated_path: str = "unrelated_questions.json") -> Dict:
-        """加载道德情境数据"""
+        """Load moral scenario data"""
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
@@ -183,7 +183,7 @@ class ConceptVectorExperiment:
         return data
     
     def get_available_foundations(self, scenarios: List[Dict]) -> Dict[str, int]:
-        """获取可用的道德基础"""
+        """Get available moral foundations"""
         foundation_counts = {}
         for scenario in scenarios:
             foundation = scenario['foundation']
@@ -191,7 +191,7 @@ class ConceptVectorExperiment:
         return foundation_counts
     
     def filter_scenarios_by_foundation(self, scenarios: List[Dict], foundation_key: str) -> List[Dict]:
-        """筛选情境"""
+        """Filter scenarios"""
         if foundation_key.lower() == "social_norms":
             return [s for s in scenarios if s['foundation'] == 'Social Norms']
         elif foundation_key.lower() == "unrelated":
@@ -207,7 +207,7 @@ class ConceptVectorExperiment:
             return [s for s in scenarios if s['foundation'] == foundation_key]
     
     def create_moral_prompt(self, scenario: str) -> str:
-        """创建道德判断的prompt"""
+        """Create prompt for moral judgment"""
         prompt = f"""Rate the moral wrongness of this behavior on a 0–4 scale (0 = not at all wrong; 4 = extremely wrong):
 
 "{scenario}"
@@ -216,7 +216,7 @@ Rating:"""
         return prompt
     
     def setup_activation_hooks(self, focus_components: List[str] = None):
-        """设置激活收集hooks"""
+        """Setup activation collection hooks"""
         if focus_components is None:
             if self.enhanced_monitoring:
                 focus_components = [
@@ -250,7 +250,7 @@ Rating:"""
                     pattern = f"model.layers.{layer_num}.{component}"
                     target_module_patterns.append((pattern, component, layer_num))
         
-        print(f"设置hooks - 每层监控 {len(focus_components)} 个组件")
+        print(f"Setting up hooks - monitoring {len(focus_components)} components per layer")
         hook_count = 0
         
         for name, module in self.model.named_modules():
@@ -280,16 +280,16 @@ Rating:"""
                     hook_count += 1
                     break
         
-        print(f"成功注册 {hook_count} 个hooks")
+        print(f"Successfully registered {hook_count} hooks")
     
     def generate_with_activations(self, prompt: str) -> Tuple[str, Dict]:
-        """生成文本并收集激活"""
+        """Generate text and collect activations"""
         inputs = self.tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
         inputs = {k: v.to(self.device) for k, v in inputs.items()}
         
         self.activation_storage.clear()
         
-        # 编码阶段
+        # Encoding phase
         with torch.no_grad():
             encoding_outputs = self.model(
                 **inputs,
@@ -299,7 +299,7 @@ Rating:"""
         
         encoding_activations = {k: v.copy() for k, v in self.activation_storage.items()}
         
-        # 生成阶段
+        # Generation phase
         for hook in self.hooks:
             hook.remove()
         
@@ -325,7 +325,7 @@ Rating:"""
     
     def _record_detailed_interaction(self, prompt: str, response: str, scenario_data: Dict, 
                                    activations: Dict, scenario_index: int, foundation_type: str):
-        """记录详细交互"""
+        """Record detailed interaction"""
         record = {
             'timestamp': datetime.now().isoformat(),
             'model_name': self.model_name,
@@ -341,7 +341,7 @@ Rating:"""
         
         self.detailed_records.append(record)
         
-        # 保存到CSV
+        # Save to CSV
         csv_file = f"{self.output_dir}/detailed_logs/interactions.csv"
         csv_row = {
             'timestamp': record['timestamp'],
@@ -361,7 +361,7 @@ Rating:"""
             writer.writerow(csv_row)
     
     def run_experiment(self, scenarios_data: Dict, n_samples_per_group: int = 50) -> Dict:
-        """运行实验"""
+        """Run experiment"""
         print(f"\nStarting experiment: {self.target_foundation.title()} vs {self.control_foundation.title()}")
         print(f"Method: Concept Vector (mean difference)")
         
@@ -370,7 +370,7 @@ Rating:"""
         for foundation, count in sorted(available_foundations.items()):
             print(f"  - {foundation}: {count} scenarios")
         
-        # 筛选场景
+        # Filter scenarios
         if self.target_foundation == self.control_foundation:
             all_scenarios = self.filter_scenarios_by_foundation(
                 scenarios_data['scenarios'], self.target_foundation
@@ -400,7 +400,7 @@ Rating:"""
         
         self.setup_activation_hooks()
         
-        # 收集激活
+        # Collect activations
         target_data = []
         control_data = []
         
@@ -474,12 +474,12 @@ Rating:"""
 
     def extract_concept_vectors(self, experiment_results: Dict) -> Dict:
         """
-        提取概念向量 - 使用简单的均值差方法
-        这是核心改动：不做统计检验，直接计算两组激活的均值差
+        Extract concept vectors - using simple mean difference method
+        This is the core change: no statistical testing, directly calculate mean difference of two groups' activations
         """
         print(f"\n{'='*70}")
-        print(f"提取概念向量: {self.target_foundation.title()} vs {self.control_foundation.title()}")
-        print(f"方法: 均值差 (Persona Vector)")
+        print(f"Extracting concept vectors: {self.target_foundation.title()} vs {self.control_foundation.title()}")
+        print(f"Method: Mean difference (Persona Vector)")
         print(f"{'='*70}\n")
         
         target_data = experiment_results['target_data']
@@ -494,9 +494,9 @@ Rating:"""
         vector_statistics = {}
         
         for layer_name in layer_names:
-            print(f"\n处理层: {layer_name}")
+            print(f"\nProcessing layer: {layer_name}")
             
-            # 收集激活矩阵
+            # Collect activation matrices
             target_activations = np.array([
                 data['activations'][layer_name].flatten() 
                 for data in target_data 
@@ -510,41 +510,41 @@ Rating:"""
             ])
             
             if target_activations.size == 0 or control_activations.size == 0:
-                print(f"  ⚠️  跳过：激活数据为空")
+                print(f"  ⚠️  Skipping: empty activation data")
                 continue
             
-            # 核心步骤：计算均值差
-            print(f"  目标组样本数: {target_activations.shape[0]}")
-            print(f"  对照组样本数: {control_activations.shape[0]}")
-            print(f"  向量维度: {target_activations.shape[1]}")
+            # Core step: calculate mean difference
+            print(f"  Target group samples: {target_activations.shape[0]}")
+            print(f"  Control group samples: {control_activations.shape[0]}")
+            print(f"  Vector dimension: {target_activations.shape[1]}")
             
-            # 1. 计算目标组中心点
+            # 1. Calculate target group centroid
             mean_target = np.mean(target_activations, axis=0)
             
-            # 2. 计算对照组中心点
+            # 2. Calculate control group centroid
             mean_control = np.mean(control_activations, axis=0)
             
-            # 3. 计算差异向量
+            # 3. Calculate difference vector
             concept_vector = mean_target - mean_control
             
-            # 计算向量统计信息
+            # Calculate vector statistics
             vector_norm = np.linalg.norm(concept_vector)
             vector_norm_l1 = np.linalg.norm(concept_vector, ord=1)
             
-            # 计算归一化向量
+            # Calculate normalized vector
             if vector_norm > 1e-8:
                 normalized_vector = concept_vector / vector_norm
             else:
                 normalized_vector = concept_vector
             
-            # 计算向量方向上最大的维度
+            # Find dimensions with largest absolute values
             top_dims = np.argsort(np.abs(concept_vector))[-10:][::-1]
             
-            print(f"  ✅ 向量范数 (L2): {vector_norm:.4f}")
-            print(f"  ✅ 向量范数 (L1): {vector_norm_l1:.4f}")
-            print(f"  ✅ Top 5 维度: {top_dims[:5].tolist()}")
+            print(f"  ✅ Vector norm (L2): {vector_norm:.4f}")
+            print(f"  ✅ Vector norm (L1): {vector_norm_l1:.4f}")
+            print(f"  ✅ Top 5 dimensions: {top_dims[:5].tolist()}")
             
-            # 保存结果
+            # Save results
             concept_vectors[layer_name] = {
                 'vector': concept_vector,
                 'normalized_vector': normalized_vector,
@@ -565,7 +565,7 @@ Rating:"""
             }
         
         print(f"\n{'='*70}")
-        print(f"✅ 成功提取 {len(concept_vectors)} 个概念向量")
+        print(f"✅ Successfully extracted {len(concept_vectors)} concept vectors")
         print(f"{'='*70}\n")
         
         return {
@@ -582,39 +582,39 @@ Rating:"""
         }
     
     def save_concept_vectors(self, concept_results: Dict):
-        """保存概念向量"""
+        """Save concept vectors"""
         save_dir = f"{self.output_dir}/concept_vectors"
         
         base_name = f"{self.model_name}_{self.target_foundation}_vs_{self.control_foundation}"
         
-        # 保存完整结果（pickle格式）
+        # Save complete results (pickle format)
         with open(f"{save_dir}/{base_name}_complete.pkl", 'wb') as f:
             pickle.dump(concept_results, f)
         
-        print(f"✅ 保存完整结果到: {save_dir}/{base_name}_complete.pkl")
+        print(f"✅ Saved complete results to: {save_dir}/{base_name}_complete.pkl")
         
-        # 保存每层的向量（numpy格式，方便后续加载）
+        # Save vectors for each layer (numpy format, convenient for later loading)
         vectors_dir = f"{save_dir}/vectors_npy"
         os.makedirs(vectors_dir, exist_ok=True)
         
         for layer_name, vector_data in concept_results['concept_vectors'].items():
             safe_layer_name = layer_name.replace('.', '_')
             
-            # 保存原始向量
+            # Save original vector
             np.save(
                 f"{vectors_dir}/{base_name}_{safe_layer_name}_vector.npy",
                 vector_data['vector']
             )
             
-            # 保存归一化向量
+            # Save normalized vector
             np.save(
                 f"{vectors_dir}/{base_name}_{safe_layer_name}_normalized.npy",
                 vector_data['normalized_vector']
             )
         
-        print(f"✅ 保存各层向量到: {vectors_dir}/")
+        print(f"✅ Saved layer vectors to: {vectors_dir}/")
         
-        # 保存向量统计信息（JSON格式）
+        # Save vector statistics (JSON format)
         stats_data = {
             'target_foundation': concept_results['target_foundation'],
             'control_foundation': concept_results['control_foundation'],
@@ -628,15 +628,15 @@ Rating:"""
         with open(f"{save_dir}/{base_name}_statistics.json", 'w', encoding='utf-8') as f:
             json.dump(stats_data, f, ensure_ascii=False, indent=2)
         
-        print(f"✅ 保存统计信息到: {save_dir}/{base_name}_statistics.json")
+        print(f"✅ Saved statistics to: {save_dir}/{base_name}_statistics.json")
     
     def visualize_concept_vectors(self, concept_results: Dict):
-        """可视化概念向量"""
-        print(f"\n创建概念向量可视化...")
+        """Visualize concept vectors"""
+        print(f"\nCreating concept vector visualizations...")
         
         vector_statistics = concept_results['vector_statistics']
         
-        # 准备数据
+        # Prepare data
         layer_names = []
         vector_norms = []
         layer_numbers = []
@@ -645,7 +645,7 @@ Rating:"""
             layer_names.append(layer_name)
             vector_norms.append(stats['vector_norm_l2'])
             
-            # 提取层号
+            # Extract layer number
             import re
             match = re.search(r'layers\.(\d+)', layer_name)
             if match:
@@ -653,7 +653,7 @@ Rating:"""
             else:
                 layer_numbers.append(0)
         
-        # 创建图表
+        # Create plots
         fig, axes = plt.subplots(2, 2, figsize=(20, 12))
         
         fig.suptitle(
@@ -662,7 +662,7 @@ Rating:"""
             fontsize=16, fontweight='bold'
         )
         
-        # 图1：向量范数趋势
+        # Plot 1: Vector norm trend
         ax1 = axes[0, 0]
         ax1.bar(range(len(layer_names)), vector_norms, alpha=0.7, color='steelblue')
         ax1.set_xlabel('Layers & Components')
@@ -673,7 +673,7 @@ Rating:"""
                            rotation=45, ha='right', fontsize=8)
         ax1.grid(True, alpha=0.3)
         
-        # 标注最强的层
+        # Annotate strongest layer
         if vector_norms:
             max_idx = np.argmax(vector_norms)
             ax1.annotate(f'{vector_norms[max_idx]:.2f}', 
@@ -682,10 +682,10 @@ Rating:"""
                         bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.7),
                         fontsize=10, fontweight='bold')
         
-        # 图2：层级趋势（如果有层号信息）
+        # Plot 2: Layer depth trend (if layer number info available)
         ax2 = axes[0, 1]
         if layer_numbers:
-            # 按层号分组平均
+            # Group average by layer number
             layer_to_norms = {}
             for ln, norm in zip(layer_numbers, vector_norms):
                 if ln not in layer_to_norms:
@@ -702,15 +702,15 @@ Rating:"""
             ax2.set_title('Concept Vector Strength by Layer Depth')
             ax2.grid(True, alpha=0.3)
         
-        # 图3：Top维度分布
+        # Plot 3: Top dimension distribution
         ax3 = axes[1, 0]
         
-        # 收集所有层的top维度
+        # Collect top dimensions across all layers
         all_top_dims = []
         for stats in vector_statistics.values():
             all_top_dims.extend(stats['top_dimensions'][:5])
         
-        # 统计频率
+        # Count frequencies
         from collections import Counter
         dim_counts = Counter(all_top_dims)
         top_dims = dim_counts.most_common(20)
@@ -725,10 +725,10 @@ Rating:"""
             ax3.set_title('Most Important Dimensions (Top 20)')
             ax3.grid(True, alpha=0.3, axis='x')
         
-        # 图4：向量相似度矩阵（余弦相似度）
+        # Plot 4: Vector similarity matrix (cosine similarity)
         ax4 = axes[1, 1]
         
-        # 计算层间相似度
+        # Calculate inter-layer similarity
         n_layers = len(concept_results['concept_vectors'])
         if n_layers > 1:
             similarity_matrix = np.zeros((n_layers, n_layers))
@@ -759,83 +759,83 @@ Rating:"""
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         plt.show()
         
-        print(f"✅ 可视化保存到: {save_path}")
+        print(f"✅ Visualization saved to: {save_path}")
     
     def generate_report(self, concept_results: Dict) -> str:
-        """生成分析报告"""
+        """Generate analysis report"""
         vector_statistics = concept_results['vector_statistics']
         model_info = concept_results['model_info']
         
         report = []
         report.append("=" * 80)
-        report.append(f"概念向量提取报告 - Persona Vector方法")
+        report.append(f"Concept Vector Extraction Report - Persona Vector Method")
         report.append(f"{self.target_foundation.title()} vs {self.control_foundation.title()}")
         report.append("=" * 80)
         
-        # 基本信息
-        report.append(f"\n模型信息:")
-        report.append(f"  - 模型名称: {model_info['model_name']}")
-        report.append(f"  - 模型类型: {model_info['model_type']}")
-        report.append(f"  - 总层数: {model_info['total_layers']}")
-        report.append(f"  - 目标基础: {self.target_foundation.title()}")
-        report.append(f"  - 对照基础: {self.control_foundation.title()}")
+        # Basic information
+        report.append(f"\nModel Information:")
+        report.append(f"  - Model name: {model_info['model_name']}")
+        report.append(f"  - Model type: {model_info['model_type']}")
+        report.append(f"  - Total layers: {model_info['total_layers']}")
+        report.append(f"  - Target foundation: {self.target_foundation.title()}")
+        report.append(f"  - Control foundation: {self.control_foundation.title()}")
         report.append(f"  - Temperature: {self.temperature}")
         report.append(f"  - Max new tokens: {self.max_new_tokens}")
-        report.append(f"  - 输出目录: {self.output_dir}")
+        report.append(f"  - Output directory: {self.output_dir}")
         
-        # 方法说明
-        report.append(f"\n方法:")
-        report.append(f"  - 提取方式: 均值差 (mean_target - mean_control)")
-        report.append(f"  - 统计检验: 无（简化版）")
-        report.append(f"  - 向量数量: {len(vector_statistics)}")
+        # Method explanation
+        report.append(f"\nMethod:")
+        report.append(f"  - Extraction method: Mean difference (mean_target - mean_control)")
+        report.append(f"  - Statistical testing: None (simplified version)")
+        report.append(f"  - Number of vectors: {len(vector_statistics)}")
         
-        # 向量统计
-        report.append(f"\n向量统计:")
+        # Vector statistics
+        report.append(f"\nVector Statistics:")
         
-        # 找出最强的向量
+        # Find strongest vector
         max_norm_layer = max(vector_statistics.items(), 
                             key=lambda x: x[1]['vector_norm_l2'])
         
-        report.append(f"  - 最强向量层: {max_norm_layer[0]}")
-        report.append(f"  - 最强向量范数: {max_norm_layer[1]['vector_norm_l2']:.4f}")
-        report.append(f"  - 平均向量范数: {np.mean([s['vector_norm_l2'] for s in vector_statistics.values()]):.4f}")
+        report.append(f"  - Strongest vector layer: {max_norm_layer[0]}")
+        report.append(f"  - Strongest vector norm: {max_norm_layer[1]['vector_norm_l2']:.4f}")
+        report.append(f"  - Average vector norm: {np.mean([s['vector_norm_l2'] for s in vector_statistics.values()]):.4f}")
         
-        # Top 5 层
-        report.append(f"\nTop 5 最强概念向量:")
+        # Top 5 layers
+        report.append(f"\nTop 5 Strongest Concept Vectors:")
         sorted_layers = sorted(vector_statistics.items(), 
                               key=lambda x: x[1]['vector_norm_l2'], 
                               reverse=True)
         
         for i, (layer_name, stats) in enumerate(sorted_layers[:5]):
             report.append(f"  {i+1}. {layer_name}")
-            report.append(f"     - L2范数: {stats['vector_norm_l2']:.4f}")
-            report.append(f"     - 目标组样本: {stats['n_target_samples']}")
-            report.append(f"     - 对照组样本: {stats['n_control_samples']}")
+            report.append(f"     - L2 norm: {stats['vector_norm_l2']:.4f}")
+            report.append(f"     - Target group samples: {stats['n_target_samples']}")
+            report.append(f"     - Control group samples: {stats['n_control_samples']}")
         
-        # 输出文件
-        report.append(f"\n输出文件:")
-        report.append(f"  - 向量数据: {self.output_dir}/concept_vectors/")
-        report.append(f"  - 可视化: {self.output_dir}/visualizations/")
-        report.append(f"  - 详细日志: {self.output_dir}/detailed_logs/")
+        # Output files
+        report.append(f"\nOutput Files:")
+        report.append(f"  - Vector data: {self.output_dir}/concept_vectors/")
+        report.append(f"  - Visualizations: {self.output_dir}/visualizations/")
+        report.append(f"  - Detailed logs: {self.output_dir}/detailed_logs/")
         
-        # 使用建议
-        report.append(f"\n使用建议:")
-        report.append(f"  - 加载向量: np.load('vectors_npy/xxx_vector.npy')")
+        # Usage recommendations
+        report.append(f"\nUsage Recommendations:")
+        report.append(f"  - Load vector: np.load('vectors_npy/xxx_vector.npy')")
         report.append(f"  - Steering: h = h + alpha * vector")
-        report.append(f"  - 监控: projection = activation @ vector")
-        report.append(f"  - 推荐alpha范围: 0.5 - 2.0")
+        report.append(f"  - Monitoring: projection = activation @ vector")
+        report.append(f"  - Recommended alpha range: 0.5 - 2.0")
         
         return "\n".join(report)
     
     def cleanup(self):
-        """清理资源"""
+        """Cleanup resources"""
         for hook in self.hooks:
             hook.remove()
         self.hooks.clear()
 
 
 def main():
-    """主函数"""
+    """Main function"""
     parser = argparse.ArgumentParser(description='Concept Vector Experiment')
     
     parser.add_argument('--model_name', type=str, default='mistral-7b-instruct')
@@ -860,15 +860,15 @@ def main():
     args = parser.parse_args()
     
     print("\n" + "="*70)
-    print(f"概念向量提取实验")
+    print(f"Concept Vector Extraction Experiment")
     print(f"{args.target_foundation.title()} vs {args.control_foundation.title()}")
-    print(f"方法: Persona Vector (均值差)")
+    print(f"Method: Persona Vector (mean difference)")
     print(f"Temperature: {args.temperature}")
     print(f"Max new tokens: {args.max_new_tokens}")
     print(f"Samples per group: {args.n_samples}")
     print("="*70 + "\n")
     
-    # 初始化实验
+    # Initialize experiment
     experiment = ConceptVectorExperiment(
         target_foundation=args.target_foundation,
         control_foundation=args.control_foundation,
@@ -881,45 +881,45 @@ def main():
     )
     
     try:
-        # 加载模型
+        # Load model
         experiment.load_model()
         
-        # 加载数据
+        # Load data
         scenarios_data = experiment.load_moral_scenarios(args.data_file)
         
-        # 运行实验
+        # Run experiment
         experiment_results = experiment.run_experiment(scenarios_data, 
                                                       n_samples_per_group=args.n_samples)
         
         if not experiment_results:
-            print("实验失败")
+            print("Experiment failed")
             return
         
-        # 提取概念向量
+        # Extract concept vectors
         concept_results = experiment.extract_concept_vectors(experiment_results)
         
         if concept_results:
-            # 保存向量
+            # Save vectors
             experiment.save_concept_vectors(concept_results)
             
-            # 可视化
+            # Visualize
             experiment.visualize_concept_vectors(concept_results)
             
-            # 生成报告
+            # Generate report
             report = experiment.generate_report(concept_results)
             print("\n" + report)
             
-            # 保存报告
+            # Save report
             base_name = f"{args.model_name}_{args.target_foundation}_vs_{args.control_foundation}"
             report_path = f"{experiment.output_dir}/concept_vectors/{base_name}_report.txt"
             with open(report_path, "w", encoding="utf-8") as f:
                 f.write(report)
             
-            print(f"\n✅ 报告保存到: {report_path}")
-            print(f"✅ 所有结果保存到: {experiment.output_dir}")
+            print(f"\n✅ Report saved to: {report_path}")
+            print(f"✅ All results saved to: {experiment.output_dir}")
         
     except Exception as e:
-        print(f"实验失败: {e}")
+        print(f"Experiment failed: {e}")
         import traceback
         traceback.print_exc()
         
