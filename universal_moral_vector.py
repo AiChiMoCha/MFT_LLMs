@@ -1,11 +1,12 @@
 """
 Moral Foundations Concept Vector Experiment - Persona Vector Method
 Uses simple mean difference method to extract concept vectors
+Supports multiple rollouts per scenario for robust activation collection
 
 Usage:
 python concept_vector_experiment.py --model_name mistral-7b-instruct \
     --model_path /path/to/model --target_foundation fairness \
-    --control_foundation care
+    --control_foundation care --n_rollouts 10
 """
 
 import json
@@ -41,7 +42,8 @@ class ConceptVectorExperiment:
                  monitoring_mode: str = "comprehensive",
                  temperature: float = 0.7,
                  max_new_tokens: int = 10,
-                 enhanced_monitoring: bool = False):
+                 enhanced_monitoring: bool = False,
+                 n_rollouts: int = 10):  # ⭐ New parameter
         
         self.target_foundation = target_foundation.lower()
         self.control_foundation = control_foundation.lower()
@@ -52,6 +54,7 @@ class ConceptVectorExperiment:
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
         self.enhanced_monitoring = enhanced_monitoring
+        self.n_rollouts = n_rollouts  # ⭐ New attribute
         self.model = None
         self.tokenizer = None
         self.activation_storage = {}
@@ -82,6 +85,7 @@ class ConceptVectorExperiment:
         print(f"Enhanced monitoring: {'Enabled' if enhanced_monitoring else 'Disabled'}")
         print(f"Temperature: {self.temperature}")
         print(f"Max new tokens: {self.max_new_tokens}")
+        print(f"Rollouts per scenario: {self.n_rollouts}")  # ⭐ New print
         print(f"Output directory: {self.output_dir}")
         
     def _setup_output_directory(self) -> str:
@@ -94,7 +98,7 @@ class ConceptVectorExperiment:
         if self.enhanced_monitoring:
             base_name += "_enhanced"
         
-        base_name += "_concept_vector"  # Mark as using concept vector method
+        base_name += "_concept_vector"
             
         output_dir = f"MFV130/{base_name}"
         os.makedirs(output_dir, exist_ok=True)
@@ -102,7 +106,7 @@ class ConceptVectorExperiment:
         # Create subdirectories
         os.makedirs(f"{output_dir}/detailed_logs", exist_ok=True)
         os.makedirs(f"{output_dir}/visualizations", exist_ok=True)
-        os.makedirs(f"{output_dir}/concept_vectors", exist_ok=True)  # New: for saving vectors
+        os.makedirs(f"{output_dir}/concept_vectors", exist_ok=True)
         
         return output_dir
         
@@ -323,47 +327,90 @@ Rating:"""
         
         return generated_text, encoding_activations
     
-    def _record_detailed_interaction(self, prompt: str, response: str, scenario_data: Dict, 
-                                   activations: Dict, scenario_index: int, foundation_type: str):
-        """Record detailed interaction"""
-        record = {
-            'timestamp': datetime.now().isoformat(),
-            'model_name': self.model_name,
-            'scenario_index': scenario_index,
-            'foundation_type': foundation_type,
-            'original_foundation': scenario_data['foundation'],
-            'scenario_text': scenario_data['scenario'],
-            'original_wrongness_rating': scenario_data['wrongness_rating'],
-            'prompt': prompt,
-            'model_response': response,
-            'activation_layers': list(activations.keys()),
-        }
+    def generate_with_multiple_rollouts(self, prompt: str, n_rollouts: int) -> Tuple[List[str], List[Dict]]:
+        """
+        ⭐ NEW: Generate multiple rollouts for a single prompt and collect all activations
         
-        self.detailed_records.append(record)
+        Args:
+            prompt: The input prompt
+            n_rollouts: Number of rollouts to perform
+            
+        Returns:
+            List of generated texts and list of activation dictionaries
+        """
+        all_generated_texts = []
+        all_activations = []
         
-        # Save to CSV
+        for rollout_idx in range(n_rollouts):
+            generated_text, activations = self.generate_with_activations(prompt)
+            all_generated_texts.append(generated_text)
+            all_activations.append(activations)
+        
+        return all_generated_texts, all_activations
+    
+    def _record_detailed_interaction(self, prompt: str, responses: List[str], scenario_data: Dict, 
+                                   activations_list: List[Dict], scenario_index: int, 
+                                   foundation_type: str, rollout_idx: int = None):
+        """
+        ⭐ MODIFIED: Record detailed interaction (supports multiple rollouts)
+        
+        Args:
+            rollout_idx: If provided, record single rollout. If None, record all rollouts.
+        """
+        if rollout_idx is not None:
+            # Record single rollout
+            record = {
+                'timestamp': datetime.now().isoformat(),
+                'model_name': self.model_name,
+                'scenario_index': scenario_index,
+                'rollout_index': rollout_idx,
+                'foundation_type': foundation_type,
+                'original_foundation': scenario_data['foundation'],
+                'scenario_text': scenario_data['scenario'],
+                'original_wrongness_rating': scenario_data['wrongness_rating'],
+                'prompt': prompt,
+                'model_response': responses[rollout_idx] if rollout_idx < len(responses) else '',
+                'activation_layers': list(activations_list[rollout_idx].keys()) if rollout_idx < len(activations_list) else [],
+            }
+            
+            self.detailed_records.append(record)
+        else:
+            # Record all rollouts
+            for idx in range(len(responses)):
+                self._record_detailed_interaction(
+                    prompt, responses, scenario_data, activations_list, 
+                    scenario_index, foundation_type, rollout_idx=idx
+                )
+        
+        # Save to CSV (save all rollouts)
         csv_file = f"{self.output_dir}/detailed_logs/interactions.csv"
-        csv_row = {
-            'timestamp': record['timestamp'],
-            'model_name': record['model_name'],
-            'scenario_index': record['scenario_index'],
-            'foundation_type': record['foundation_type'],
-            'original_foundation': record['original_foundation'],
-            'scenario_text': record['scenario_text'],
-            'model_response': record['model_response'],
-        }
         
-        file_exists = os.path.exists(csv_file)
-        with open(csv_file, 'a', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=csv_row.keys())
-            if not file_exists:
-                writer.writeheader()
-            writer.writerow(csv_row)
+        for idx, (response, activations) in enumerate(zip(responses, activations_list)):
+            csv_row = {
+                'timestamp': datetime.now().isoformat(),
+                'model_name': self.model_name,
+                'scenario_index': scenario_index,
+                'rollout_index': idx,
+                'foundation_type': foundation_type,
+                'original_foundation': scenario_data['foundation'],
+                'scenario_text': scenario_data['scenario'],
+                'model_response': response,
+            }
+            
+            file_exists = os.path.exists(csv_file)
+            with open(csv_file, 'a', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=csv_row.keys())
+                if not file_exists:
+                    writer.writeheader()
+                writer.writerow(csv_row)
     
     def run_experiment(self, scenarios_data: Dict, n_samples_per_group: int = 50) -> Dict:
-        """Run experiment"""
+        """
+        ⭐ MODIFIED: Run experiment with multiple rollouts per scenario
+        """
         print(f"\nStarting experiment: {self.target_foundation.title()} vs {self.control_foundation.title()}")
         print(f"Method: Concept Vector (mean difference)")
+        print(f"Rollouts per scenario: {self.n_rollouts}")
         
         available_foundations = self.get_available_foundations(scenarios_data['scenarios'])
         print(f"\nAvailable foundations:")
@@ -393,6 +440,7 @@ Rating:"""
         
         print(f"\n{self.target_foundation.title()} scenarios: {len(target_scenarios)}")
         print(f"{self.control_foundation.title()} scenarios: {len(control_scenarios)}")
+        print(f"Total activations to collect: {(len(target_scenarios) + len(control_scenarios)) * self.n_rollouts}")
         
         if len(target_scenarios) == 0 or len(control_scenarios) == 0:
             print("❌ No scenarios found!")
@@ -404,51 +452,65 @@ Rating:"""
         target_data = []
         control_data = []
         
-        print(f"\nProcessing {self.target_foundation.title()} scenarios...")
+        # ⭐ Process target scenarios with multiple rollouts
+        print(f"\nProcessing {self.target_foundation.title()} scenarios ({self.n_rollouts} rollouts each)...")
         for i, scenario in enumerate(tqdm(target_scenarios, desc=self.target_foundation.title())):
             prompt = self.create_moral_prompt(scenario['scenario'])
             try:
-                generated_text, activations = self.generate_with_activations(prompt)
-                
-                self._record_detailed_interaction(
-                    prompt, generated_text, scenario, activations, i, self.target_foundation
+                # Generate multiple rollouts
+                generated_texts, activations_list = self.generate_with_multiple_rollouts(
+                    prompt, self.n_rollouts
                 )
                 
+                # Record all rollouts
+                self._record_detailed_interaction(
+                    prompt, generated_texts, scenario, activations_list, i, self.target_foundation
+                )
+                
+                # Store data with all rollouts
                 target_data.append({
                     'scenario': scenario['scenario'],
                     'foundation': scenario['foundation'],
                     'wrongness_rating': scenario['wrongness_rating'],
-                    'generated_text': generated_text,
-                    'activations': activations
+                    'generated_texts': generated_texts,  # ⭐ Multiple responses
+                    'activations_list': activations_list,  # ⭐ Multiple activation sets
+                    'n_rollouts': self.n_rollouts
                 })
             except Exception as e:
                 print(f"Error processing scenario {i}: {e}")
                 continue
         
-        print(f"\nProcessing {self.control_foundation.title()} scenarios...")
+        # ⭐ Process control scenarios with multiple rollouts
+        print(f"\nProcessing {self.control_foundation.title()} scenarios ({self.n_rollouts} rollouts each)...")
         for i, scenario in enumerate(tqdm(control_scenarios, desc=self.control_foundation.title())):
             prompt = self.create_moral_prompt(scenario['scenario'])
             try:
-                generated_text, activations = self.generate_with_activations(prompt)
-                
-                self._record_detailed_interaction(
-                    prompt, generated_text, scenario, activations, i, self.control_foundation
+                # Generate multiple rollouts
+                generated_texts, activations_list = self.generate_with_multiple_rollouts(
+                    prompt, self.n_rollouts
                 )
                 
+                # Record all rollouts
+                self._record_detailed_interaction(
+                    prompt, generated_texts, scenario, activations_list, i, self.control_foundation
+                )
+                
+                # Store data with all rollouts
                 control_data.append({
                     'scenario': scenario['scenario'],
                     'foundation': scenario['foundation'],
                     'wrongness_rating': scenario['wrongness_rating'],
-                    'generated_text': generated_text,
-                    'activations': activations
+                    'generated_texts': generated_texts,  # ⭐ Multiple responses
+                    'activations_list': activations_list,  # ⭐ Multiple activation sets
+                    'n_rollouts': self.n_rollouts
                 })
             except Exception as e:
                 print(f"Error processing scenario {i}: {e}")
                 continue
         
         print(f"\nSuccessfully processed:")
-        print(f"  {self.target_foundation.title()}: {len(target_data)}")
-        print(f"  {self.control_foundation.title()}: {len(control_data)}")
+        print(f"  {self.target_foundation.title()}: {len(target_data)} scenarios × {self.n_rollouts} rollouts = {len(target_data) * self.n_rollouts} total activations")
+        print(f"  {self.control_foundation.title()}: {len(control_data)} scenarios × {self.n_rollouts} rollouts = {len(control_data) * self.n_rollouts} total activations")
         
         return {
             'target_data': target_data,
@@ -458,6 +520,7 @@ Rating:"""
             'model_name': self.model_name,
             'model_path': self.model_path,
             'enhanced_monitoring': self.enhanced_monitoring,
+            'n_rollouts': self.n_rollouts,  # ⭐ Store rollouts info
             'model_config': {
                 'model_type': self.model_config.model_type if self.model_config else 'unknown',
                 'total_layers': self.total_layers,
@@ -468,18 +531,20 @@ Rating:"""
                 'target_layers': self.target_layers,
                 'n_target_scenarios': len(target_data),
                 'n_control_scenarios': len(control_data),
-                'enhanced_monitoring': self.enhanced_monitoring
+                'enhanced_monitoring': self.enhanced_monitoring,
+                'n_rollouts': self.n_rollouts  # ⭐ Store rollouts info
             }
         }
 
     def extract_concept_vectors(self, experiment_results: Dict) -> Dict:
         """
-        Extract concept vectors - using simple mean difference method
-        This is the core change: no statistical testing, directly calculate mean difference of two groups' activations
+        ⭐ MODIFIED: Extract concept vectors from multiple rollouts
+        Average activations across all rollouts for each scenario before computing mean difference
         """
         print(f"\n{'='*70}")
         print(f"Extracting concept vectors: {self.target_foundation.title()} vs {self.control_foundation.title()}")
         print(f"Method: Mean difference (Persona Vector)")
+        print(f"Rollouts per scenario: {experiment_results.get('n_rollouts', 1)}")
         print(f"{'='*70}\n")
         
         target_data = experiment_results['target_data']
@@ -489,33 +554,51 @@ Rating:"""
             print("No data to analyze!")
             return {}
         
-        layer_names = list(target_data[0]['activations'].keys())
+        # Get layer names from first rollout of first scenario
+        layer_names = list(target_data[0]['activations_list'][0].keys())
         concept_vectors = {}
         vector_statistics = {}
         
         for layer_name in layer_names:
             print(f"\nProcessing layer: {layer_name}")
             
-            # Collect activation matrices
-            target_activations = np.array([
-                data['activations'][layer_name].flatten() 
-                for data in target_data 
-                if layer_name in data['activations']
-            ])
+            # ⭐ Collect and average activations across rollouts for each scenario
+            target_activations_per_scenario = []
+            for data in target_data:
+                # Average activations across all rollouts for this scenario
+                rollout_activations = []
+                for rollout_activations_dict in data['activations_list']:
+                    if layer_name in rollout_activations_dict:
+                        rollout_activations.append(rollout_activations_dict[layer_name].flatten())
+                
+                if rollout_activations:
+                    # Average across rollouts
+                    avg_activation = np.mean(rollout_activations, axis=0)
+                    target_activations_per_scenario.append(avg_activation)
             
-            control_activations = np.array([
-                data['activations'][layer_name].flatten() 
-                for data in control_data 
-                if layer_name in data['activations']
-            ])
+            control_activations_per_scenario = []
+            for data in control_data:
+                # Average activations across all rollouts for this scenario
+                rollout_activations = []
+                for rollout_activations_dict in data['activations_list']:
+                    if layer_name in rollout_activations_dict:
+                        rollout_activations.append(rollout_activations_dict[layer_name].flatten())
+                
+                if rollout_activations:
+                    # Average across rollouts
+                    avg_activation = np.mean(rollout_activations, axis=0)
+                    control_activations_per_scenario.append(avg_activation)
+            
+            target_activations = np.array(target_activations_per_scenario)
+            control_activations = np.array(control_activations_per_scenario)
             
             if target_activations.size == 0 or control_activations.size == 0:
                 print(f"  ⚠️  Skipping: empty activation data")
                 continue
             
             # Core step: calculate mean difference
-            print(f"  Target group samples: {target_activations.shape[0]}")
-            print(f"  Control group samples: {control_activations.shape[0]}")
+            print(f"  Target scenarios: {target_activations.shape[0]} (each averaged over {experiment_results.get('n_rollouts', 1)} rollouts)")
+            print(f"  Control scenarios: {control_activations.shape[0]} (each averaged over {experiment_results.get('n_rollouts', 1)} rollouts)")
             print(f"  Vector dimension: {target_activations.shape[1]}")
             
             # 1. Calculate target group centroid
@@ -560,6 +643,7 @@ Rating:"""
                 'top_values': concept_vector[top_dims[:10]].tolist(),
                 'n_target_samples': target_activations.shape[0],
                 'n_control_samples': control_activations.shape[0],
+                'n_rollouts_per_sample': experiment_results.get('n_rollouts', 1),
                 'target_mean_norm': float(np.linalg.norm(mean_target)),
                 'control_mean_norm': float(np.linalg.norm(mean_control)),
             }
@@ -573,6 +657,7 @@ Rating:"""
             'vector_statistics': vector_statistics,
             'target_foundation': self.target_foundation,
             'control_foundation': self.control_foundation,
+            'n_rollouts': experiment_results.get('n_rollouts', 1),
             'model_info': {
                 'model_name': self.model_name,
                 'model_path': self.model_path,
@@ -619,6 +704,7 @@ Rating:"""
             'target_foundation': concept_results['target_foundation'],
             'control_foundation': concept_results['control_foundation'],
             'model_info': concept_results['model_info'],
+            'n_rollouts': concept_results.get('n_rollouts', 1),
             'vector_statistics': {}
         }
         
@@ -635,6 +721,7 @@ Rating:"""
         print(f"\nCreating concept vector visualizations...")
         
         vector_statistics = concept_results['vector_statistics']
+        n_rollouts = concept_results.get('n_rollouts', 1)
         
         # Prepare data
         layer_names = []
@@ -658,7 +745,7 @@ Rating:"""
         
         fig.suptitle(
             f'Concept Vectors: {self.target_foundation.title()} vs {self.control_foundation.title()}\n'
-            f'Model: {self.model_name}',
+            f'Model: {self.model_name} | Rollouts per scenario: {n_rollouts}',
             fontsize=16, fontweight='bold'
         )
         
@@ -682,10 +769,9 @@ Rating:"""
                         bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.7),
                         fontsize=10, fontweight='bold')
         
-        # Plot 2: Layer depth trend (if layer number info available)
+        # Plot 2: Layer depth trend
         ax2 = axes[0, 1]
         if layer_numbers:
-            # Group average by layer number
             layer_to_norms = {}
             for ln, norm in zip(layer_numbers, vector_norms):
                 if ln not in layer_to_norms:
@@ -704,13 +790,10 @@ Rating:"""
         
         # Plot 3: Top dimension distribution
         ax3 = axes[1, 0]
-        
-        # Collect top dimensions across all layers
         all_top_dims = []
         for stats in vector_statistics.values():
             all_top_dims.extend(stats['top_dimensions'][:5])
         
-        # Count frequencies
         from collections import Counter
         dim_counts = Counter(all_top_dims)
         top_dims = dim_counts.most_common(20)
@@ -725,10 +808,8 @@ Rating:"""
             ax3.set_title('Most Important Dimensions (Top 20)')
             ax3.grid(True, alpha=0.3, axis='x')
         
-        # Plot 4: Vector similarity matrix (cosine similarity)
+        # Plot 4: Vector similarity matrix
         ax4 = axes[1, 1]
-        
-        # Calculate inter-layer similarity
         n_layers = len(concept_results['concept_vectors'])
         if n_layers > 1:
             similarity_matrix = np.zeros((n_layers, n_layers))
@@ -757,7 +838,7 @@ Rating:"""
         
         save_path = f"{self.output_dir}/visualizations/{self.model_name}_{self.target_foundation}_vs_{self.control_foundation}_concept_vectors.png"
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        plt.show()
+        plt.close()
         
         print(f"✅ Visualization saved to: {save_path}")
     
@@ -765,6 +846,7 @@ Rating:"""
         """Generate analysis report"""
         vector_statistics = concept_results['vector_statistics']
         model_info = concept_results['model_info']
+        n_rollouts = concept_results.get('n_rollouts', 1)
         
         report = []
         report.append("=" * 80)
@@ -781,11 +863,13 @@ Rating:"""
         report.append(f"  - Control foundation: {self.control_foundation.title()}")
         report.append(f"  - Temperature: {self.temperature}")
         report.append(f"  - Max new tokens: {self.max_new_tokens}")
+        report.append(f"  - Rollouts per scenario: {n_rollouts}")
         report.append(f"  - Output directory: {self.output_dir}")
         
         # Method explanation
         report.append(f"\nMethod:")
         report.append(f"  - Extraction method: Mean difference (mean_target - mean_control)")
+        report.append(f"  - Rollout strategy: {n_rollouts} rollouts per scenario, averaged before mean difference")
         report.append(f"  - Statistical testing: None (simplified version)")
         report.append(f"  - Number of vectors: {len(vector_statistics)}")
         
@@ -809,8 +893,8 @@ Rating:"""
         for i, (layer_name, stats) in enumerate(sorted_layers[:5]):
             report.append(f"  {i+1}. {layer_name}")
             report.append(f"     - L2 norm: {stats['vector_norm_l2']:.4f}")
-            report.append(f"     - Target group samples: {stats['n_target_samples']}")
-            report.append(f"     - Control group samples: {stats['n_control_samples']}")
+            report.append(f"     - Target scenarios: {stats['n_target_samples']} (× {n_rollouts} rollouts)")
+            report.append(f"     - Control scenarios: {stats['n_control_samples']} (× {n_rollouts} rollouts)")
         
         # Output files
         report.append(f"\nOutput Files:")
@@ -856,6 +940,8 @@ def main():
                         help='Temperature for text generation (default: 0.7)')
     parser.add_argument('--max_new_tokens', type=int, default=10,
                         help='Maximum number of new tokens to generate (default: 10)')
+    parser.add_argument('--n_rollouts', type=int, default=10,  
+                        help='Number of rollouts per scenario (default: 10)')
     
     args = parser.parse_args()
     
@@ -866,6 +952,7 @@ def main():
     print(f"Temperature: {args.temperature}")
     print(f"Max new tokens: {args.max_new_tokens}")
     print(f"Samples per group: {args.n_samples}")
+    print(f"Rollouts per scenario: {args.n_rollouts}") 
     print("="*70 + "\n")
     
     # Initialize experiment
@@ -877,7 +964,8 @@ def main():
         monitoring_mode=args.monitoring_mode,
         enhanced_monitoring=args.enhanced_monitoring,
         temperature=args.temperature,
-        max_new_tokens=args.max_new_tokens
+        max_new_tokens=args.max_new_tokens,
+        n_rollouts=args.n_rollouts  
     )
     
     try:

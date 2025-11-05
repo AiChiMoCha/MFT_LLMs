@@ -1,0 +1,2102 @@
+[
+  {
+    "scenario": "You see a student glancing at another’s answers while taking a closed-book exam.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student sneak photos of an exam with their phone to share later.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student paying someone to write their term paper and submit it as theirs.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student using a hidden earpiece to get answers during a quiz.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student copying homework answers from an online forum and submitting them.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student fabricating lab data to make results look better for the report.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student submitting the same essay to two different classes without permission.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student plagiarizing paragraphs from a published article into their assignment.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student altering graded exams to claim higher scores from the instructor.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student bribing a classmate to reveal answers to a take-home exam.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student using notes hidden in a calculator during a test.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student paying others to complete online quizzes under their login.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student forging a professor’s signature on an attendance sheet.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student sharing pre-made exam answers via a private group chat.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student photocopying a sealed exam page before the test starts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student claiming credit on a group project they did not contribute to.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student trading exam answers for money with peers in the library.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student hacking into the online gradebook to raise their scores.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student buying an already graded paper and turning it in as original.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student asking someone else to take a final exam on their behalf.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student altering project contributions on peer evaluation forms to look better.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student secretly using study aids restricted during an exam.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student buying clicker responses to register attendance without being present.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student fabricating an illness to get an exam postponed for advantage.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student copying answers from a posted graded exam before all students see it.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student paying to access a professor’s draft exam illegally before class.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student using unauthorized study aids during a closed laptop exam.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student submitting a purchased essay with minimal edits to meet a deadline.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student forging lab attendance records to claim extra credit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student sharing answers during an online open-book test when collaboration is banned.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student altering a citation to hide copied material in their essay.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student registering for a class and then selling their spot to another for profit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student lying about previous coursework to bypass placement exams.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student asking the grader to change scores in exchange for favors.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student using a cheat sheet taped inside their notebook during a test.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee padding their timesheet with hours they never worked.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker taking expensive office supplies home for personal use.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming credit for a coworker’s idea in a team meeting.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee submitting false receipts for reimbursement from the company.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person deliberately missing deadlines to avoid additional assigned tasks.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee using company equipment for a personal side business during hours.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a coworker hiding errors in their work and blaming software to save face.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee exaggerating sales figures to earn a bigger commission.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking extended breaks but logging full hours on the clock.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker sabotaging a colleague’s project to make their own work look better.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee promising clients benefits they are not authorized to give.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone spreading false performance rumors to undermine a competitor at work.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee freeloading on shared office snacks without contributing to payments.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker using a coworker’s login to access confidential files for advantage.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee tampering with metrics dashboards to hide poor performance.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking a client opportunity from a teammate without attribution.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee lying about qualifications on their resume to get hired.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a manager approving personal expenses as business costs on reports.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone hiding their side income from the company to avoid conflict rules.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee swapping low-quality work into a shared project to avoid extra tasks.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker claiming sick leave while working another paid job.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee buying favorable internal reviews for promotion consideration.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking office parking reserved for others without permission.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee altering a coworker’s name on an achievement award to themselves.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker monopolizing shared resources to finish personal projects during work hours.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone pressuring interns to do unpaid work that benefits their own evaluations.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee falsifying project completion dates to earn early bonuses.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone altering inventory records to cover up personal theft.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee using insider information to benefit a private investment.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a coworker refusing to share essential information to gain an edge.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee manipulating customer complaints to avoid responsibility for mistakes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone accepting vendor gifts in exchange for preferential contract terms.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee setting up fake accounts to funnel company funds to themselves.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone intentionally underperforming on shared tasks to lower team standards.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee misrepresenting client feedback to secure a bonus.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a runner cutting across lawns to shorten the race course and gain time.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player intentionally stepping out of bounds but telling the referee otherwise.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a swimmer using illegal underwater kicks to race ahead of competitors.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a cyclist drafting behind a vehicle to gain speed during a race.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a baseball player applying substance to the ball to affect its movement.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tennis player intentionally feigning injury to gain a time-out advantage.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a competitor bribing an official to overlook rule violations.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a soccer player diving to draw a foul and get a penalty kick.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a chess player using hidden notes from a coach during a tournament.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an athlete taking performance-enhancing substances to gain an edge.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a golfer moving a ball marker slightly to improve their next shot.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a team swapping new players onto rosters after eligibility deadlines.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a swimmer receiving coaching signals from the poolside during a heat.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a runner wearing a hidden motorized device to assist in sprints.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a boxer taking a long break between rounds to continue illegal medication.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a student athlete accepting payment to underperform in a game.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a race official ignoring lane violations for a favored competitor.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a competitor tampering with competition equipment before the match starts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a gamer using external macros to automate moves during an esports tournament.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player substituting a younger athlete’s identity to meet age limits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a competitor accepting inside course knowledge to plot shortcuts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a basketball player intentionally fouling after timeout to reset play unfairly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a coach instructing players to fake injuries to manipulate substitution rules.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a cyclist switching bikes mid-race to gain aerodynamic advantage hiddenly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an archer altering arrow tips to improve performance without detection.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a runner using an unseen pacing vehicle to maintain faster times.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a contestant bribing judges to receive higher subjective scores.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player swapping a game ball with one of different weight subtly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a golfer marking a preferred lie and not reporting it to officials.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a swimmer arguing with officials to distract them from a false start.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a runner swapping bib numbers to benefit from a different seed time.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a fencer modifying equipment to appear to land touches unfairly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a swimmer receiving illegal thrusters attached to their suit during practice.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player deliberately slowing play to disrupt an opponent’s momentum.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a competitor accepting match-fixing payments to throw a competition.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper switching price tags to pay less at the register.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer returning used items for a full refund without a receipt.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer reselling store-limited items for profit outside the store.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a cashier giving a customer an unauthorized discount at checkout.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper using counterfeit coupons to reduce their purchase price.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller mislabeling product weight to charge more per ounce.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone opening products in-store and returning them later as new.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a clerk scanning items at lower prices than marked for a customer.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a vendor selling expired food with false dates to appear fresh.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer pocketing small items while pretending to browse.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper switching the price barcode after scanning to a lower code.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer lying about product defects to get a replacement free.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller omitting key product flaws in an online listing.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer claiming a purchase never arrived to get a refund and keep it.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper swapping luxury tags onto cheaper goods to sell as designer.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee discounting their own purchases and hiding the record from managers.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a vendor manipulating scales to overcharge customers at a market.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer using a fake receipt to return stolen items for cash.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a salesperson padding memberships with hidden recurring fees not disclosed.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone reselling promotional samples as full-price goods.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer claiming warranty coverage for damage they caused intentionally.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper manipulating digital price tags to display lower costs.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a clerk pocketing cash from a return instead of processing it.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a vendor advertising bundles but charging separately for essential components.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer writing false reviews in exchange for refunds.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a shopper switching serial numbers to claim a newer model under warranty.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller misrepresenting secondhand goods as brand-new to boost price.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer using a store’s trial equipment beyond the trial to sell later.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone exploiting a coupon glitch repeatedly to buy items free.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer insisting a product was damaged to force a full refund.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee diverting online orders to their private address for resale.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer using another’s loyalty account to collect rewards benefits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a vendor switching expiration labels to sell quickly expiring food as fresh.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer abusing price-matching policies to buy items at competitor prices.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer lying about membership status to access restricted discounts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone underreporting cash sales to reduce their tax bill.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person hiding rental income by paying cash and not declaring it.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a taxpayer claiming false deductions for personal expenses.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an accountant falsifying records to lower a client’s taxes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using fake invoices to funnel business funds into personal accounts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a citizen claiming benefits while working and not reporting income.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person skimming cash donations before submitting church funds.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an official authorizing public funds for private contractors they secretly own.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using government-issued equipment for private business purposes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person setting up shell companies to hide assets from creditors.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming dependents who do not actually live in the household.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a clerk pocketing cash collected for public parking meters.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person falsifying charitable donations on a tax return.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a contractor overbilling a municipal project to skim surplus funds.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using a deceased person’s identity to claim benefits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a driver avoiding tolls by using a borrowed transponder without payment.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person hiding overseas accounts to evade tax authorities.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an employee altering payroll records to divert wages to themselves.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone illegally cashing government checks meant for others.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a local official approving expense claims for personal vacations.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person backdating donations to claim deductions in a different year.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone falsifying income documents to qualify for a loan.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident illegally connecting to public utilities without registration.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a business owner mixing company and personal expenses to avoid taxes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming emergency funds for damage they never reported.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an individual selling public equipment purchased with municipal funds for profit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person falsifying residency to pay lower local taxes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone inflating business losses to reduce taxable income.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a contractor hiding subcontractor payments to avoid payroll taxes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person using fake medical bills to claim health expense deductions.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone diverting public fundraising money into personal bank accounts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a driver claiming business mileage for personal trips on expense reports.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a property owner hiding short-term rental income from tax filings.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone forging signatures to redirect pension payments to themselves.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a taxpayer using false business losses to obtain government relief fraudulently.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant subletting their apartment without landlord permission for extra income.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a roommate eating shared groceries and not replacing them.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant forging maintenance requests to receive free repairs to resell parts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a neighbor claiming another’s parking spot and blocking access.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a landlord charging hidden fees not specified in the lease.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a roommate lying about paying utilities while using them freely.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone turning a balcony into an unauthorized storage unit for profit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident painting common areas without permission to claim improvement credit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant withholding rent to force a landlord into concession agreements.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a roommate secretly subletting an extra key to strangers for money.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone stealing packages from a shared building lobby for resale.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident falsifying occupancy to bypass housing limits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant making unauthorized renovations and billing neighbors for noise damages.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a homeowner listing a shared community amenity as private for personal bookings.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a renter refusing to share laundry time but using machines overnight.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant forging inspection reports to hide lease violations.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a roommate draining household supplies and hiding wrappers to avoid blame.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a landlord taking a security deposit but failing to return it without cause.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person blocking common bike racks for personal storage.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant using communal parking as private overnight storage for a fee.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident claiming a shared mailbox as their own to intercept mail.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone changing thermostat settings to shift heating costs to others.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a subletter charging neighbors for utilities they never consumed.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant forging a roommate’s signature to evict them unfairly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident giving access codes to strangers for paid entry during events.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a homeowner advertising unpermitted rooms as legal rentals for extra income.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant lying about damage to keep the full deposit after moving out.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see roommates agreeing to split costs while one stops paying their share.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a landlord promising repairs to secure a lease then never doing them.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant claiming a higher living allowance to receive extra subsidies.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person renting out communal storage lockers for personal profit without consent.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a neighbor taking down shared notices to hide postings that affect them.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a tenant duplicating keys and charging visitors for entry during events.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone forging utility bills to claim lower usage on shared accounts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a roommate selling assigned parking passes and keeping the money.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a gamer using bots to farm in-game currency for resale.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone buying fake positive reviews to boost a product’s rating.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an account holder selling access to a banned profile for money.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player exploiting a game glitch to win competitions unfairly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone creating multiple accounts to manipulate online polls and contests.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller misrepresenting item condition with edited photos on a marketplace.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user buying followers to falsely appear influential for sponsorships.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using stolen credit cards to make online purchases.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller paying for click farms to inflate engagement on product posts.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a streamer hiding donations from moderators to pocket them privately.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user posting false testimonials to sell coaching services.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone scraping paywalled content and reposting it for ad revenue.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player sharing account credentials to bypass matchmaking restrictions.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a buyer charging back a purchase after keeping the delivered goods.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using VPNs to vote multiple times in an online poll.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller creating fake scarcity to pressure immediate purchases.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user posting fake screenshots of transactions to deceive buyers.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player using aim-assist software in a tournament misrepresented as skill.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone creating clone websites to harvest login information.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller relisting returned items as new without inspection.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user selling fake certificates or degrees online for profit.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone misusing promo codes repeatedly despite one-time restrictions.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a player coordinating with others to manipulate match outcomes for rewards.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller hiding past damage history in a product listing.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone fabricating age to access restricted online services.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user posting falsified receipts to get reimbursement from a group fund.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a gamer using a secondary account to boost a main account’s ranking.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone misrepresenting a digital asset’s ownership while selling it.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user engaging in review swapping to inflate service ratings.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller altering product serials to falsely offer extended warranties.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone offering fake internships online to collect application fees.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a streamer using pre-recorded footage to claim live performance.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a user sharing exploit scripts to give others unfair in-game advantages.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone creating fake charity pages online to collect donations personally.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a seller mislabeling digital downloads to avoid refund policies.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter cutting the subway line and boarding before others who were waiting.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a driver parking in a spot reserved for deliveries without permission.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking a public bench with luggage for hours, denying others use.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter using a disabled permit that does not belong to them.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person jumping ahead in a movie line to get better seats.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking extra free samples intended for one per customer.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a passenger sneaking onto a bus without paying the fare.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person reserving spots in a public queue with personal items.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone occupying a shared workspace outlet to charge personal devices all day.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter claiming priority seating without needing it during rush hour.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person detaching community flyers to post their own paid advertisement.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone leaving a cart in a busy aisle blocking access for others.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a bicyclist using the pedestrian path designated for walkers only.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person reserving public picnic tables for a private party all day.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone hogging multiple grocery carts while shopping with a small group.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter sneaking bicycles onto a train during peak hours against rules.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person taking a free parking spot designated for short-term turnover.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone placing a \"reserved\" sign on a public table without authorization.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter occupying an entire bus seat with luggage during rush hour.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person taking multiple free newspapers and leaving none for others.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming a public locker for private storage beyond permitted time.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter blocking a wheelchair ramp with a parked scooter.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person refusing to share communal playground equipment during peak hours.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone sneaking into a member-only facility using another’s access card.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter taking extra free samples from a vendor meant for distribution.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person temporarily moving recycling bins to reserve curb space.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone blocking a public charging station with their device after finishing use.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter claiming a stroller spot in priority space without young children.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person occupying a shared meeting room beyond booked time without consent.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone cutting into a taxi queue and taking the next cab unfairly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter storing personal items in a bike rack denying others access.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming a shared rooftop lounge as private for their guests.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person using staff restrooms in a public venue for personal convenience repeatedly.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking more than allotted free samples at a bakery.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a commuter using a shopping cart to reserve a bus seat during peak hours.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone pretending to share the same interests to win a date’s trust.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person lying about their relationship status to pursue someone.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone faking job status to seem more successful on a dating app.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater using old photos to misrepresent their current appearance.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming shared values they don’t actually hold to impress a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person secretly sexting others while saying they are exclusive.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone borrowing money from multiple dates without intending to repay.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone creating fake conversations to make a date jealous intentionally.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater lying about their income to secure expensive dinners.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone catfishing by using another person’s profile photos to attract dates.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person pretending to be uninterested until they can secure benefits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone lying about their age to appear more compatible with a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater promising exclusivity to obtain favors they don’t intend to keep.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone hiding past relationships to avoid accountability in a new one.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person fabricating travel plans to avoid meeting a date in person.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone deliberately ghosting while keeping the other’s messages unread for weeks.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater using fake references to appear more trustworthy to a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming to be in the same city to arrange meetings, though they are not.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person hiding addictive behaviors to avoid jeopardizing a relationship prospect.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone misrepresenting family background to gain sympathy from a date.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater inventing emergencies to cancel plans and appear indispensable later.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person sharing edited messages to make a partner seem unreliable to others.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone pretending to like children to impress a date who wants a family.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater creating fake mutual friends to seem well-connected.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone lying about their interests to join a partner’s hobby for perks.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person using another’s compliments as their own online to impress dates.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person falsely claiming custody responsibilities to appear dependable to a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone selling shared photos from dates to a gossip site without consent.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater misreporting their travel history to conceal a previous relationship.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone pretending to be supportive to coerce financial help from a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person creating fake emergency contacts among dates for backup favors.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone ghostwriting love notes to appear romantically expressive to a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a dater lying about their living situation to move closer to a partner.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using fake pregnancy claims to manipulate relationship decisions.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person falsely claiming charitable donations to appear generous to dates.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone cutting in line at a busy bakery to get served first.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person taking excessive samples at a free event meant to be shared.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming a promotional prize they did not actually win.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a customer leaving without paying a tip promised for a small service.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone lying about prior experience to win a volunteer leadership role.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see an applicant fabricating references to obtain a board position.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person accepting a free upgrade and refusing to offer it to those waiting.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone manipulating a board game to hide their rule violations.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person reserving community resources for personal events without approval.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking credit for a community project they did not help build.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person lying to access a restricted promotion for early purchase.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone selling tickets they received for community allocation at a higher price.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a worker using sick days to attend a side job for extra pay.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person altering shared scoreboards to appear more successful.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone taking advantage of a buying glitch to get free goods.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a volunteer charging fees for a free community service for personal gain.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person monopolizing a communal tool collection to run a small business.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone forging a membership card to access exclusive benefits.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a resident falsifying attendance at a homeowners meeting to affect votes.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person taking multiple educational handouts intended for one per student.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone misusing a courtesy pass to bypass paid entry lines.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person avoiding jury duty by misrepresenting their employment status.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone siphoning community funds into a private account for discretionary use.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a participant in a fundraising race accepting donated funds for personal use.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone claiming travel reimbursement for trips they did not take.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person mislabeling items as returned to claim warranty exchanges.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone exploiting a referral bonus by creating fake new users.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a community leader accepting personal gifts from vendors for contract favors.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person falsely claiming a lost item to retrieve a replacement.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone using a hardship discount they do not qualify for to save money.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person providing false credentials to access a professional exam early.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone deceiving neighbors to gain extra spots in a community garden.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a homeowner misrepresenting a property issue to get a lower sale price fix.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see someone manipulating shared resource booking software to reserve peak slots.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see a person using a forged volunteer badge to access event-only perks.",
+    "foundation": "Fairness",
+    "classifications": {},
+    "wrongness_rating": null
+  }
+]

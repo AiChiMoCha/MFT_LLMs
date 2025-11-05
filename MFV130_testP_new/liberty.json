@@ -1,0 +1,2030 @@
+[
+  {
+    "scenario": "You see … a mother insisting her son become a doctor like she wants.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents forbidding their teenager from choosing a different religion.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father demanding his daughter marry someone from their hometown.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … grandparents telling a young couple they must live nearby.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent choosing all of their child's extracurricular activities.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother requiring her son to take over the family business.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents ordering their child to drop out and work full time.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father insisting his daughter cut her hair short before prom.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent checking and deleting their teenager's messages without consent.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother blocking her son from applying to out-of-state colleges.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents forcing their child to attend weekly family prayer gatherings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father telling his son he must become a commercial pilot.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent forbidding their child from dating someone of another culture.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother insisting her daughter wear traditional clothes at home.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents choosing their child's social media profile photos for them.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father requiring his son to adopt the family surname legally.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent ordering their teenager to stop using certain friends' houses.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother deciding which college major her child will pursue.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents forcing their adolescent to attend the career coaching they chose.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father telling his daughter she must cancel a solo trip abroad.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother dictating which hobbies her son is allowed to practice.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent demanding their child remove a small tattoo before graduation.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … grandparents insisting children follow family traditions despite their objections.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent forbidding their child to move in with a long-term partner.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother telling her son he cannot pursue an artistic career.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent requiring weekly check-ins and travel approvals for their adult child.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a father ordering his daughter to speak only the family language at home.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents deciding which friends their teenager may see on weekends.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother insisting her child change majors to preserve the family reputation.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent preventing their teen from getting a part-time job they chose.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … grandparents demanding the family inherit business roles be accepted by grandchildren.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent forcing their teenager to delete photos they consider inappropriate.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mother insisting her son follow the family's dietary rules outside the home.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … parents requiring their child to attend arranged meetings with potential spouses.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boyfriend telling his partner she must quit her job.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a girlfriend insisting her partner attend only her family events.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner demanding their significant other change their hairstyle immediately.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone forbidding their partner from maintaining friendships with exes.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a spouse ordering their partner to stop using social media entirely.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner insisting his girlfriend convert to his religion before marriage.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a person telling their partner they cannot travel without permission.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner forcing their significant other to relocate for their career only.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone demanding their partner stop wearing certain clothes in public.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner requiring their spouse to attend weekly family meetings they control.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a person telling their partner they must cut contact with a sibling.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner insisting their spouse take on all household financial decisions.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone pressuring their partner to change their name after marriage.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a fiancee forbidding her partner from pursuing artistic hobbies.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner ordering their significant other to get a specific cosmetic procedure.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone demanding their partner delete friends who disapprove of them.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a spouse forcing their partner to follow their strict bedtime routine.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner insisting their significant other adopt their political views publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone telling their partner they cannot work with certain coworkers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner forbidding their spouse from attending local protests or meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone pressuring their partner to stop using their maiden name professionally.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner telling their significant other they must limit family visits.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a person requiring their partner to share all phone passwords and accounts.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner insisting their spouse dress modestly whenever guests arrive.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone ordering their partner to stop pursuing a graduate degree.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner demanding their significant other present a united political front publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a person forbidding their partner from forming close friendships with coworkers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner insisting their spouse attend only activities approved by them.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone telling their partner to stop speaking with certain neighbors.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner forcing their significant other to end a hobby group membership.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … someone insisting their partner apologize publicly for disagreeing with them.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner requiring their spouse to follow their preferred parenting style exclusively.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a person telling their partner they must stop using certain colors in clothing.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a partner forbidding their significant other from celebrating holidays their family dislikes.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager requiring employees to attend her brother's restaurant events.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss ordering staff to change political affiliations publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor insisting employees remove all personal photos from their desks.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager forbidding staff from discussing weekends or outside plans.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer demanding workers hand over personal social media passwords.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss requiring employees to wear branded clothing outside work hours.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager forcing staff to donate to a colleague's fundraiser.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor ordering an employee to revoke foreign citizenship paperwork.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss insisting employees attend after-hours religious meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager telling staff they cannot work remotely without approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor banning employees from mentioning their mental health needs at work.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss requiring employees to use their legal name only in emails.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager insisting staff use company-approved political statements on personal pages.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor ordering employees to participate in her personal mentorship program.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss forbidding staff from joining professional associations outside company membership.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager insisting employees remove visible jewelry before coming to the office.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor requiring employees to attend weekend team-building trips at their own expense.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss telling staff they must relocate to a different city for promotion.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager ordering employees to collect signatures supporting company policy changes.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor forcing staff to work unpaid overtime on short notice.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss demanding employees change their profile pictures to company portraits.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager forbidding staff from wearing visible political buttons at work.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor insisting employees undergo a specific grooming standard before client meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss ordering staff to stop following a former colleague online.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager telling employees they must attend their partner's public product launch.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor requiring staff to use only company-approved language in personal biographies.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss insisting employees remove tattoos before meeting clients.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager forbidding staff from discussing salary information with coworkers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor ordering employees to sign a pledge supporting the CEO's views.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss telling staff they cannot bring certain friends into the office.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager requiring employees to join a company-sponsored social club.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor insisting employees refuse external offers without management approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss ordering staff to change weekend plans for a corporate gala.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager forbidding employees from placing political posters in their workspace.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher ordering a student to get a normal haircut before class.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal banning students from wearing cultural headscarves on campus.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school counselor insisting a student's major choice be changed.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher forcing students to join the school's debate team.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal requiring all students to stand for assembly pledges.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher demanding a student stop speaking their home language in class.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school forcing students to attend mandatory weekend tutoring sessions.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher telling a student to remove political stickers from their notebook.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal forbidding students from organizing an unapproved club.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher requiring students to use assigned gendered uniforms every day.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school insisting parents enroll their child in a specific curriculum track.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher ordering a student to change their artwork to meet guidelines.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal banning certain books from the school library without student input.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher insisting students recite a chosen moral statement aloud.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school administrator forbidding students from distributing flyers about internships.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher demanding a student stop participating in a peer group activity.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal requiring students to attend religious observances on campus.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher telling a student they must switch to the standard classroom seat.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school forcing students to accept a specific college preparatory program.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher insisting students remove piercings before participating in performances.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal banning students from wearing political campaign gear at school.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher requiring a student to apologize publicly for dissenting in class.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school removing student choices for electives and assigning classes directly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher ordering students to stand behind a particular viewpoint for a debate.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal forbidding students from bringing certain cultural foods for lunch.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher insisting a student adopt a different name for roll call.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school requiring parental approval to allow students to change clubs.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher telling a student they must sit with assigned classmates only.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal banning student protests on campus without prior authorization.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher forcing students to memorize and present a chosen creed.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school administrator denying student leadership positions for nonconforming views.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher ordering students to remove visible tattoos before class attendance.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a principal insisting students attend alumni fundraising events in uniform.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher forbidding students from wearing certain hairstyles in class.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor banning congregants from wearing bright colors in church.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a priest insisting parishioners submit to a specific confession practice.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious leader telling members they must convert spouses before marriage.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a minister forcing congregants to attend mandatory study sessions every week.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a faith leader requiring members to stop celebrating certain holidays.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor insisting believers follow a strict dress code at all gatherings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious teacher telling students to renounce outside beliefs publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an elder forbidding community members from listening to certain music genres.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a clergy member ordering followers to end relationships outside the faith.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious group requiring members to live in assigned housing together.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a leader insisting congregants avoid specific careers deemed inappropriate by them.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor telling couples they must seek approval before marrying someone outside faith.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious leader forbidding women from holding certain public roles in the community.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an imam requiring congregants to follow particular grooming standards at mosque.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a spiritual leader banning members from reading books not approved by the group.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor telling congregants they must donate directly to his chosen charity.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious teacher insisting adherents stop celebrating cultural festivals at home.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a leader forcing members to attend conversion classes with their partners.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a clergy member ordering followers to refrain from participating in politics openly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a minister demanding parishioners alter their children's names to match tradition.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious leader forbidding members from using certain modern technologies at services.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor insisting congregants avoid wearing jewelry considered worldly by him.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a faith leader telling members they must adopt prescribed family planning rules.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious elder ordering couples to follow arranged marriage meetings within the community.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a clergy member insisting members provide personal information for group approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor forbidding congregants from attending events hosted by other churches.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious leader telling followers to only frequent approved businesses.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a minister requiring children of members to attend faith-based schools exclusively.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a clergy member instructing adherents to remove artwork considered inappropriate from homes.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a faith leader insisting members regulate their friends to match doctrinal standards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a pastor forbidding congregants from discussing doctrinal doubts publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a religious leader requiring members to dress modestly whenever outside their homes.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a minister ordering followers to cease celebrating mixed-faith family events.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor trying to ban people from hugging and kissing in public in his city.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a council member proposing fines for citizens attending certain rallies.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city official forcing businesses to display only approved slogans.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a police chief requiring permits for peaceful neighborhood meetups without explanation.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an elected leader ordering public libraries to remove specific books from shelves.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor imposing a rule limiting the times people can protest downtown.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city council banning residents from distributing independent flyers door to door.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a local official instructing community centers to refuse space for certain meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a bureaucrat telling citizens they must use designated language on official forms.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a town leader ordering farmers to stop selling products at community markets.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor requiring citizens to register personal gatherings above a small size.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a council member telling schools to cancel student voter registration drives.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city official banning political signs from residential yards during elections.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipal leader mandating surnames be displayed on public-facing permits.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a politician proposing mandatory attendance at civic loyalty workshops.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a government office requiring residents to use a specific online portal to file complaints.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor ordering parks to deny permits for certain cultural festivals.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a civic committee insisting applicants relinquish rights to post criticisms publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a local official forbidding homeowners from converting garages without prior social approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a town clerk requiring signatures to get permission for neighborhood signs.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor proposing a ban on unapproved neighborhood associations meeting in public spaces.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city council telling vendors to stop accepting certain forms of payment.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipal leader ordering public murals be changed to approved imagery only.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a bureaucrat insisting residents obtain approval before hosting educational workshops.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a local official requiring landlords to evict tenants for hosting political meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a politician mandating public employees display a loyalty badge at work.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city leader forbidding students from wearing campaign paraphernalia during school visits.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipal council requiring charity groups to obtain special permits for fundraising.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a mayor instructing libraries to block access to certain websites on public computers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city official banning unofficial neighborhood watch groups from patrolling streets.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a council member proposing restrictions on door-to-door canvassing without registration.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipal leader telling local artisans they must apply to sell crafts in markets.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a government office requiring citizens to disclose protest attendance to receive services.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school requiring all students to wear gender-assigned uniforms every day.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager insisting an employee use their legal birth name at work.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord forbidding tenants from displaying pride flags on balconies.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a coach telling athletes they must shave their facial hair before games.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a politician proposing a ban on certain hairstyles in public offices.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a workplace forcing a trans employee to use the restroom of their assigned sex.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a salon manager ordering staff to refuse particular hair colors clients request.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent insisting their child present in traditionally gendered clothing for family events.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher requiring students to use names matching their birth certificates.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a club banning members from wearing attire associated with a subculture.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a boss insisting employees remove visible makeup for client meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a coach ordering female athletes to wear longer uniforms than male teammates.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord demanding tenants change outward home decorations to match neighborhood standards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school nurse telling students they must cut their fingernails shorter to attend class.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager requiring employees to follow a strict gendered grooming policy.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a community leader insisting residents avoid certain modes of dress in public spaces.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company policy forcing staff to use binary gender options on profiles.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher forbidding students from wearing cultural jewelry in class performances.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord telling a tenant they must remove pride-themed window stickers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor instructing employees to adopt formal male speech patterns in meetings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school principal banning nontraditional hairstyles among students.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager ordering staff to switch to names the company prefers on badges.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a parent insisting their teenager stop exploring a new gender presentation at school.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a gym requiring members to wear gender-specific locker rooms regardless of preference.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a coach telling an athlete to stop wearing personal expression accessories during practice.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord forbidding tenants from painting their doors unconventional colors.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company requiring applicants to submit photos with job applications.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a teacher insisting a student conform to gendered restroom assignments during school hours.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager telling a staffer they must alter their voice to sound more feminine.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a community council forbidding face coverings for certain cultural events.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school requiring students to follow a strict haircut policy for performances.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a supervisor ordering employees to remove visible piercings for client interactions.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord insisting that tenants dress conservatively in shared building spaces.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a coach forcing teammates to wear matching uniforms without allowing personal modifications.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a group of friends pressuring someone to post a scripted message online.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers insisting a newcomer adopt their weekend routine to fit in.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a social circle forcing one member to stop attending a class they enjoy.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends telling a person they must change their music tastes to belong.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … classmates pressuring someone to join a club they dislike to be accepted.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a circle of coworkers insisting a colleague attend after-work drinks every night.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers forcing a team member to endorse a group's chosen candidate publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a friend group telling someone to stop speaking with a certain relative.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … neighbors insisting a resident alter garden decorations to match the block theme.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … teammates pressuring a player to change personal rituals for team unity.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends forcing one person to remove photos they posted of a night out.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a clique telling someone they must stop wearing their preferred style.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers insisting a student share their notes for every class without reciprocity.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends demanding a person hide their new relationship from others.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a community group pressuring a member to vote as they instruct.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … colleagues insisting a staffer participate in a weekend charity event they choose.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a friend circle telling someone to stop pursuing solo travel plans.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers forcing a member to conform to humor that makes them uncomfortable.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … classmates insisting a student switch teams to maintain social balance.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … neighbors pressuring a homeowner to repaint in neutral, approved colors.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends demanding someone remove their political posts to keep peace.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a group telling a person they must join their shared fitness program.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers insisting someone stop mentoring a younger student outside the group's oversight.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends forcing a member to attend an event despite scheduling conflicts.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a social set insisting a person cut ties with a differing friend group.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … classmates pressuring a student to submit to a group assignment leader's rules.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … neighbors telling a resident they must limit visitors to meet block standards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers insisting a person stop practicing a hobby they enjoy publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends forcing someone to adopt their collective style for group photos.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a circle pushing a member to falsely claim they support a trend.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … colleagues insisting a staffer conform to after-work volunteering demands.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … friends demanding someone change their dietary choices when dining together.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … peers pressuring a person into dropping out of an elective they love.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a neighborhood group telling a resident to stop hosting community workshops.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer requiring employees to share personal device locations during off hours.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school forcing students to use facial recognition to enter campus.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform demanding users verify identity with a government ID to post.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a manager insisting staff install monitoring software on home computers.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a social app requiring users to link profiles to real names publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company forcing customers to opt into targeted ads to use services.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer telling workers to surrender encrypted messaging access for audits.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform removing posts unless users comply with a mandated script.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a site requiring users to accept content moderation rules removing dissenting views.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school demanding students register personal devices on a tracking network.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an ISP forcing subscribers to use a government-approved browser extension.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipality requiring residents to sign up for a monitored emergency app.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a work system insisting employees share cloud passwords with supervisors.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform instructing creators to post only approved promotional content.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company mandating employees disclose private accounts for supervisory review.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a social network forcing users to display location check-ins to remain verified.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school requiring parents to install monitoring apps on children's phones.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer blocking access to competitors' sites and requiring a signed waiver.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform banning accounts unless users agree to specific political disclosures.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a workplace mandating staff upload personal photos for mandatory ID badges.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a service requiring customers to consent to data sharing to continue use.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company forcing users to accept automatic content filtering without opt-out.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a municipal portal insisting citizens use a single sign-on tied to national ID.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer demanding employees enable screen-sharing during off-peak hours.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform removing private groups unless moderators follow administrative scripts.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school requiring students participate in an app that tracks study hours.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a company insisting applicants link their online profiles to job applications.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform forcing creators to remove content that doesn't match advertiser standards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a workplace mandating the installation of productivity trackers on phones.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a service demanding users delete accounts elsewhere before joining their network.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a smartphone provider requiring customers to use a preinstalled parental control app.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an employer insisting staff sign a clause allowing random device inspections.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a platform banning users who don't adopt a new verification process.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a school forcing teachers to use a district-controlled classroom recording system.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord forbidding tenants from having overnight guests without written permission.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a gym requiring members to attend scheduled classes chosen by management.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a homeowner association telling residents which plants they may grow in front yards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a concierge insisting residents follow a curfew for common area access.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a transportation company requiring passengers to travel only with company-approved ID.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord ordering tenants to remove personal artwork from hallways.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an event organizer demanding attendees wear only approved colors to a festival.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a rental company forbidding renters from subletting without explicit approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a cruise director insisting passengers follow assigned daily activity schedules.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a building manager telling residents they cannot display holiday decorations outside windows.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a park authority restricting where picnickers may place blankets without asking.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a cooperative requiring members to vote in alignment with leadership endorsements.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a volunteer coordinator insisting helpers stick to assigned social circles only.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a travel company forcing clients to join guided excursions they did not choose.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a tour operator prohibiting independent exploration during scheduled stops.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a condo board banning residents from drying laundry in shared spaces.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a festival organizer requiring vendors to sell only approved merchandise types.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a theater company telling audience members they must sit in assigned seats long-term.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord insisting tenants clear balconies of personal items for aesthetic reasons.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a homeowners group forbidding temporary signage supporting social causes in yards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a ticket seller mandating attendees waive rights to record events publicly.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a community center requiring members to register every visitor before use.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … an airline forcing passengers to use a designated app to check in, no alternatives.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a museum telling patrons they cannot sketch exhibits without prior approval.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a campground requiring campers to use specified cooking times and areas only.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a bank forcing customers to use a single branch for certain transactions.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a hotel insisting guests follow an approved dress code for dining rooms.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a co-op grocery telling shoppers they must purchase a minimum weekly quota.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a fair organizer ordering artists to alter works to meet family-friendly standards.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a community pool requiring swimmers to follow a specific swimwear policy.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a landlord forbidding bicycle storage in personal units without authorization.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a city park requiring permits and fees for informal music gatherings.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a homeowner association forcing residents to repaint fences in approved colors.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  },
+  {
+    "scenario": "You see … a seasonal market demanding vendors follow a strict branding layout.",
+    "foundation": "Liberty",
+    "classifications": {},
+    "wrongness_rating": null
+  }
+]
