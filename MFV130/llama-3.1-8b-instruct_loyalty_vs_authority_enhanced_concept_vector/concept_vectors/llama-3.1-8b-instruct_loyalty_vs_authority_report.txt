@@ -1,0 +1,59 @@
+================================================================================
+Concept Vector Extraction Report - Persona Vector Method
+Loyalty vs Authority
+================================================================================
+
+Model Information:
+  - Model name: llama-3.1-8b-instruct
+  - Model type: llama
+  - Total layers: 32
+  - Target foundation: Loyalty
+  - Control foundation: Authority
+  - Temperature: 0.01
+  - Max new tokens: 10
+  - Rollouts per scenario: 10
+  - Output directory: MFV130/llama-3.1-8b-instruct_loyalty_vs_authority_enhanced_concept_vector
+
+Method:
+  - Extraction method: Mean difference (mean_target - mean_control)
+  - Rollout strategy: 10 rollouts per scenario, averaged before mean difference
+  - Statistical testing: None (simplified version)
+  - Number of vectors: 160
+
+Vector Statistics:
+  - Strongest vector layer: model.layers.31_residual_stream
+  - Strongest vector norm: 4.8935
+  - Average vector norm: 0.5395
+
+Top 5 Strongest Concept Vectors:
+  1. model.layers.31_residual_stream
+     - L2 norm: 4.8935
+     - Target scenarios: 200 (× 10 rollouts)
+     - Control scenarios: 200 (× 10 rollouts)
+  2. model.layers.30_residual_stream
+     - L2 norm: 3.5189
+     - Target scenarios: 200 (× 10 rollouts)
+     - Control scenarios: 200 (× 10 rollouts)
+  3. model.layers.31.mlp.down_proj
+     - L2 norm: 3.0277
+     - Target scenarios: 200 (× 10 rollouts)
+     - Control scenarios: 200 (× 10 rollouts)
+  4. model.layers.31.mlp
+     - L2 norm: 3.0277
+     - Target scenarios: 200 (× 10 rollouts)
+     - Control scenarios: 200 (× 10 rollouts)
+  5. model.layers.29_residual_stream
+     - L2 norm: 2.8686
+     - Target scenarios: 200 (× 10 rollouts)
+     - Control scenarios: 200 (× 10 rollouts)
+
+Output Files:
+  - Vector data: MFV130/llama-3.1-8b-instruct_loyalty_vs_authority_enhanced_concept_vector/concept_vectors/
+  - Visualizations: MFV130/llama-3.1-8b-instruct_loyalty_vs_authority_enhanced_concept_vector/visualizations/
+  - Detailed logs: MFV130/llama-3.1-8b-instruct_loyalty_vs_authority_enhanced_concept_vector/detailed_logs/
+
+Usage Recommendations:
+  - Load vector: np.load('vectors_npy/xxx_vector.npy')
+  - Steering: h = h + alpha * vector
+  - Monitoring: projection = activation @ vector
+  - Recommended alpha range: 0.5 - 2.0
