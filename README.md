@@ -1,5 +1,7 @@
 # Moral Foundations in LLMs (draft version)
 
+![Intro figure](assets/Intro2-cropped-compressed.pdf)
+
 This project extracts concept vectors from LLMs to study how they represent different moral foundations. The current method is based on the Persona Vector approach, using simple mean differences to identify moral concept directions in the model's activation space.
 
 ## What This Does
