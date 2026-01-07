@@ -1,4 +1,4 @@
-# Moral Foundations in LLMs (draft version)
+# Tracing Moral Foundations in LLMs
 
 ![Intro figure](assets/Intro2.png)
 
@@ -7,7 +7,7 @@ This project extracts concept vectors from LLMs to study how they represent diff
 ## What This Does
 
 The code analyzes how LLMs process moral scenarios by:
-1. Feeding the model scenarios related to different moral foundations (care, fairness, loyalty, authority, sanctity, liberty)
+1. Feeding the model scenarios related to different moral foundations (care, fairness, loyalty, authority, sanctity)
 2. Capturing the model's internal activations (how neurons fire)
 3. Computing concept vectors that represent the difference between two moral foundations/social norms
 4. Saving these vectors for later use in model steering and projections 
@@ -51,80 +51,109 @@ pip install -r requirements.txt
 .
 ├── universal_moral_vector.py           # Step 1: Extract concept vectors
 ├── projection_test_cli_wasserstein.py  # Step 2: Test and validate vectors
-├── MFV130Gen.json                      # Moral scenarios for training (generating Vetors)
-├── unrelated_questions.json            # unrelated scenarios (test only)
-├── MFV130_testP/                       # Test scenarios for Projection validation
-│   ├── care.json
-│   ├── fairness.json
-│   ├── loyalty.json
-│   └── ...
+├── moral_steer_all_layers_robust.py    # Step 3: Causal intervention via steering
+├── Data/
+│   ├── MFV130Gen.json                  # Moral scenarios for training (generating vectors)
+│   ├── MFV130.json                     # Moral scenarios dataset
+│   ├── MFQ2.json                       # Moral Foundations Questionnaire for steering evaluation
+│   └── MFRC_by_foundation/             # Test scenarios by foundation
+│       ├── care.json
+│       ├── fairness.json
+│       ├── loyalty.json
+│       ├── authority.json
+│       ├── sanctity.json
+│       └── nonmoral_2000.json
 ├── environment.yaml                    # Conda environment
 ├── requirements.txt                    # pip requirements
 └── README.md
 ```
 
+## Available Options
 
-## Two-Step Workflow (exps start here:)
+### Supported Models
 
-This project uses a two-step process:
+- `llama-3.1-8b-instruct` (path: `model_cache/Meta-Llama-3.1-8B-Instruct`)
+- `qwen-2.5-7b-instruct` (path: `model_cache/Qwen2.5-7B-Instruct`)
 
-### Step 1: Extract Concept Vectors
+### Available Moral Foundations
+
+Choose from: `care`, `fairness`, `loyalty`, `authority`, `sanctity`, `social_norms`
+
+## Three-Step Workflow
+
+### Step 1: Constructing Relative Moral Representations
 
 Use `universal_moral_vector.py` to extract concept vectors from the model by comparing two moral foundations.
-
-### Step 2: Test and Validate Vectors
-
-Use `projection_test_cli_wasserstein.py` to test how well the extracted vectors separate different concepts using independent test data.
-
-
-### Step 3: Steering Test & SAEs
-to be added here
-
------
-
-## Quick Start
-
-### Step 1: Extract Concept Vectors
-
-Extract concept vectors by comparing two moral foundations:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python universal_moral_vector.py \
   --model_name llama-3.1-8b-instruct \
-  --model_path /path/to/Meta-Llama-3.1-8B-Instruct \
-  --target_foundation care \
-  --control_foundation loyalty \
-  --n_samples 100
+  --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
+  --target_foundation sanctity \
+  --control_foundation social_norms \
+  --enhanced_monitoring \
+  --monitoring_mode full \
+  --temperature 0.01 \
+  --max_new_tokens 10 \
+  --n_samples 200
 ```
 
 This will create a directory like:
 ```
-MFV130/llama-3.1-8b-instruct_care_vs_loyalty_concept_vector/
+MFV130/llama-3.1-8b-instruct_sanctity_vs_social_norms_enhanced_concept_vector/
 └── concept_vectors/
     └── vectors_npy/  # ← Use this path in Step 2
 ```
 
-### Step 2: Test the Extracted Vectors
+### Step 2: Topological Alignment with Human-Labeled Distributions
 
-Test how well your vectors separate concepts using independent test data:
+Use `projection_test_cli_wasserstein.py` to test how well the extracted vectors separate different concepts using independent test data.
+
+#### Option A: Between Foundation and Social Norm
+
+Test whether the vector can distinguish a moral foundation from non-moral content:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python projection_test_cli_wasserstein.py \
-  --model_path /path/to/Meta-Llama-3.1-8B-Instruct \
-  --vector_path MFV130/.../concept_vectors/vectors_npy \
-  --test_file1 MFV130_testP/care.json \
-  --test_file2 MFV130_testP/loyalty.json \
+  --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
+  --vector_path MFV130/llama-3.1-8b-instruct_sanctity_vs_social_norms_enhanced_concept_vector/concept_vectors/vectors_npy \
+  --test_file1 Data/MFRC_by_foundation/sanctity.json \
+  --test_file2 Data/MFRC_by_foundation/nonmoral_2000.json \
+  --wass_d_min 0.3 \
+  --wass_p_max 0.05
+```
+
+#### Option B: Between Foundations
+
+Test whether the vector can distinguish between two different moral foundations:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python projection_test_cli_wasserstein.py \
+  --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
+  --vector_path MFV130/llama-3.1-8b-instruct_care_vs_sanctity_enhanced_concept_vector/concept_vectors/vectors_npy \
+  --test_file1 Data/MFRC_by_foundation/care.json \
+  --test_file2 Data/twitter_by_foundation/care.json \
   --wass_d_min 0.3 \
   --wass_p_max 0.05
 ```
 
 **Important:** The order of test files matters!
-- `test_file1`: Scenarios that should project in the **positive direction** (concept1)
-- `test_file2`: Scenarios that should project in the **negative direction** (concept2)
+- `test_file1`: Scenarios that should project in the **positive direction** (target concept)
+- `test_file2`: Scenarios that should project in the **negative direction** (control concept)
 
-For a `care_vs_loyalty` vector:
-- `test_file1` = care.json (should be on the right/positive side)
-- `test_file2` = loyalty.json (should be on the left/negative side)
+### Step 3: Causal Intervention Through Steering
+
+Use `moral_steer_all_layers_robust.py` to test whether the extracted vectors can causally influence model behavior on moral reasoning tasks.
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python moral_steer_all_layers_robust.py \
+  --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
+  --vector_dir MFV130 \
+  --concept_pair care_vs_authority \
+  --mfq_path Data/MFQ2.json \
+  --output_path results/RB_care_vs_authority_all_layers.json \
+  --n_rollouts 5
+```
 
 ## Command Line Arguments
 
@@ -141,7 +170,7 @@ For a `care_vs_loyalty` vector:
 | `--enhanced_monitoring` | flag | off | Monitor additional components (attention, MLP, residual stream) |
 | `--temperature` | float | 0.7 | Sampling temperature for generation |
 | `--max_new_tokens` | int | 10 | Maximum tokens to generate per scenario |
-| `--data_file` | str | `MFV130Gen.json` | JSON file with moral scenarios |
+| `--data_file` | str | `Data/MFV130Gen.json` | JSON file with moral scenarios |
 
 ### Step 2: Vector Testing (`projection_test_cli_wasserstein.py`)
 
@@ -156,168 +185,14 @@ For a `care_vs_loyalty` vector:
 | `--wass_p_max` | float | 0.01 | Maximum p-value for layer to pass |
 | `--bh_alpha` | float | 0.05 | FDR correction alpha for multiple testing |
 
-### Available Moral Foundations
+### Step 3: Steering Test (`moral_steer_all_layers_robust.py`)
 
-- `care` - Care and compassion
-- `fairness` - Fairness and justice
-- `loyalty` - Loyalty to groups
-- `authority` - Respect for authority
-- `sanctity` - Purity and sanctity
-- `liberty` - Freedom and autonomy
-- `social_norms` - General social norms (good control baseline)
-- `unrelated` - Non-moral questions (control)
-
-## Input Data Format
-
-The code expects a JSON file (`MFV130Gen.json`) with this structure:
-
-```json
-{
-  "scenarios": [
-    {
-      "scenario": "A person refuses to help an injured stranger",
-      "foundation": "Care",
-      "wrongness_rating": 3
-    },
-    ...
-  ]
-}
-```
-
-## Output Structure
-
-### Step 1 Output: Vector Extraction
-
-Results are saved in `MFV130/{model_name}_{target}_vs_{control}_concept_vector/`:
-
-```
-MFV130/
-└── llama-3.1-8b-instruct_care_vs_loyalty_concept_vector/
-    ├── concept_vectors/
-    │   ├── {model}_{target}_vs_{control}_complete.pkl    # Full results
-    │   ├── {model}_{target}_vs_{control}_statistics.json # Vector stats
-    │   ├── {model}_{target}_vs_{control}_report.txt      # Summary report
-    │   └── vectors_npy/                                   # ← Use this in Step 2
-    │       ├── *_vector.npy                               # Raw vectors
-    │       └── *_normalized.npy                           # Normalized vectors
-    ├── detailed_logs/
-    │   └── interactions.csv                               # All model responses
-    └── visualizations/
-        └── *_concept_vectors.png                          # Analysis plots
-```
-
-### Step 2 Output: Vector Testing
-
-Results are saved in `projection_results/{vector_name}/{test_comparison}_{timestamp}/`:
-
-```
-projection_results/
-└── care_vs_loyalty/
-    └── care_vs_loyalty_20241029_143022/
-        ├── test_report.txt                    # ⭐ Main results with direction check
-        ├── statistics.json                    # Detailed statistics per layer
-        ├── visualizations/
-        │   ├── all_layers_summary.png         # Overview of all layers
-        │   └── layer_{N}_detail.png           # Per-layer analysis
-        └── projections/
-            ├── layer_{N}_Care.npy             # Raw projection values
-            └── layer_{N}_Loyalty.npy
-```
-
-## How to Use the Results
-
-### Loading Saved Vectors
-
-```python
-import numpy as np
-import pickle
-
-# Load a specific layer's vector
-vector = np.load('MFV130/.../vectors_npy/model_layers_15_mlp_vector.npy')
-
-# Load complete results
-with open('MFV130/.../complete.pkl', 'rb') as f:
-    results = pickle.load(f)
-```
-
-### Using Vectors for Model Steering
-
-```python
-# Add the concept vector to model activations
-# alpha controls the strength (typically 0.5 to 2.0)
-steering_strength = 1.5
-modified_activation = original_activation + steering_strength * concept_vector
-```
-
-### Monitoring Concept Presence
-
-```python
-# Project activation onto concept vector to see how much of the concept is present
-concept_score = np.dot(activation, concept_vector)
-```
-
-## Understanding the Method
-
-### Step 1: Vector Extraction (Persona Vector Approach)
-
-This implementation uses the **Persona Vector** approach:
-
-1. **Collect activations**: Run the model on scenarios from two different moral foundations
-2. **Compute means**: Calculate the average activation for each foundation
-3. **Extract difference**: Subtract control mean from target mean to get the concept vector
-
-The formula is simple:
-```
-concept_vector = mean(target_activations) - mean(control_activations)
-```
-
-This differs from statistical methods that use t-tests or other significance testing. The simple mean difference often works well for capturing concept directions in neural networks.
-
-### Step 2: Vector Validation (Wasserstein Distance under Emperical Distribution)
-
-The testing script validates vectors using:
-
-1. **Wasserstein Distance**: Measures how far apart the two distributions are (better than Cohen's d for non-normal distributions)
-2. **Direction Check**: Verifies that concept1 projects to the right (positive) and concept2 to the left (negative)
-3. **Statistical Significance**: Bootstrap p-values to ensure the separation is not by chance
-4. **FDR Correction**: Benjamini-Hochberg correction for testing multiple layers
-
-#### Key Metrics
-
-- **Wasserstein D**: Distance between distributions (higher = better separation)
-- **p-value**: Probability the difference is due to chance (lower = better)
-- **Direction**: ✅ if concept1 > concept2, ❌ if reversed
-- **Layer Status**: 
-  - `PASS`: Good separation AND correct direction
-  - `FAIL(DIR)`: Good separation but wrong direction
-  - `FAIL(SEP)`: Correct direction but poor separation
-  - `FAIL(BOTH)`: Both metrics fail
-
-#### Reading the Results
-
-The test report shows:
-```
-层      W-D         p         p_adj    -log10(p)   方向   综合判定
-15    0.845    1.0e-05    1.5e-04      5.00      ✅      PASS
-18    0.923    2.0e-06    3.0e-05      5.70      ✅      PASS
-22    0.654    8.0e-04    8.0e-03      3.10      ❌    FAIL(DIR)
-```
-
-- Layer 15 & 18: Good vectors (pass both tests)
-- Layer 22: Wrong direction (data might be swapped or vector is inverted)
-
-## Monitoring Modes
-
-- **light**: 3 layers (fast, good for testing)
-- **comprehensive**: 6 layers across the model depth (recommended)
-- **dense**: ~10 layers (more detailed)
-- **full**: all layers (thorough but slow)
-
-With `--enhanced_monitoring`, you also capture:
-- Self-attention outputs
-- Attention projection layers
-- MLP layers
-- MLP down-projection
-- Residual stream
-
+| Argument | Type | Default | Description |
+|----------|------|---------|-------------|
+| `--model_path` | str | (required) | Path to the model |
+| `--vector_dir` | str | (required) | Directory containing extracted concept vectors |
+| `--concept_pair` | str | (required) | Concept pair to test (e.g., `care_vs_authority`) |
+| `--mfq_path` | str | (required) | Path to Moral Foundations Questionnaire JSON (e.g., `Data/MFQ2.json`) |
+| `--output_path` | str | (required) | Path to save steering results |
+| `--n_rollouts` | int | 5 | Number of rollouts for robust evaluation |
 
