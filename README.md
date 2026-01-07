@@ -2,15 +2,16 @@
 
 ![Intro figure](assets/Intro2.png)
 
-This project extracts concept vectors from LLMs to study how they represent different moral foundations. The current method is based on the Persona Vector approach, using simple mean differences to identify moral concept directions in the model's activation space.
+## Abstract
+Large language models (LLMs) often produce human-like moral judgments, but it is unclear whether this reflects an internal conceptual structure or superficial "moral mimicry." Using Moral Foundations Theory (MFT) as an analytic framework, we study how moral foundations are encoded, organized, and expressed within two instruction-tuned LLMs: Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct. We employ a multi-level approach combining (i) layer-wise analysis of MFT concept representations and their alignment with human moral perceptions, (ii) pretrained sparse autoencoders (SAEs) over the residual stream to identify sparse features that support moral concepts, and (iii) causal steering interventions using dense MFT vectors and sparse SAE features. We find that both models represent and distinguish moral foundations in a structured, layer-dependent way that aligns with human judgments. At a finer scale, SAE features show clear semantic links to specific foundations, suggesting partially disentangled mechanisms within shared representations. Finally, steering along either dense vectors or sparse features produces predictable shifts in foundation-relevant behavior, demonstrating a causal connection between internal representations and moral outputs. Together, our results provide mechanistic evidence that moral concepts in LLMs are distributed, layered, and partly disentangled, suggesting that pluralistic moral structure can emerge as a latent pattern from the statistical regularities of language alone.
 
 ## What This Does
 
-The code analyzes how LLMs process moral scenarios by:
+This repository contains code for analyzing how LLMs represent moral foundations internally. Our approach consists of three main components:
 1. Feeding the model scenarios related to different moral foundations (care, fairness, loyalty, authority, sanctity)
-2. Capturing the model's internal activations (how neurons fire)
-3. Computing concept vectors that represent the difference between two moral foundations/social norms
-4. Saving these vectors for later use in model steering and projections 
+2. Constructing Relative Moral Representations: Extract concept vectors from LLMs by comparing activations between different moral foundations using the Persona Vector approach
+3. Topological Alignment with Human-Labeled Distributions: Validate that extracted vectors align with human moral perceptions using Wasserstein distance metrics
+4. Causal Intervention Through Steering: Demonstrate causal relationships between internal representations and moral outputs via activation steering
 
 ## Installation
 
