@@ -133,7 +133,7 @@ CUDA_VISIBLE_DEVICES=0 python projection_test_cli_wasserstein.py \
   --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
   --vector_path MFV130/llama-3.1-8b-instruct_care_vs_sanctity_enhanced_concept_vector/concept_vectors/vectors_npy \
   --test_file1 Data/MFRC_by_foundation/care.json \
-  --test_file2 Data/twitter_by_foundation/care.json \
+  --test_file2 Data/twitter_by_foundation/sanctity.json \
   --wass_d_min 0.3 \
   --wass_p_max 0.05
 ```
