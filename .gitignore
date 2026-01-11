@@ -1,0 +1,8 @@
+# Ignore large data and model files
+data/*
+!data/.gitkeep   <-- This exception keeps the folder itself!
+models/*
+!models/.gitkeep
+__pycache__/
+*.pyc
+.ipynb_checkpoints

@@ -1,0 +1,7 @@
+Steering Sensitivity Analysis - Qwen (Alpha Scale Factor: 50)
+================================================================================
+Authority    L11   Slope: +0.1443
+Care         L19   Slope: +0.4386
+Fairness     L19   Slope: +0.4430
+Loyalty      L19   Slope: +0.3211
+Sanctity     L19   Slope: +0.6613
