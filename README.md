@@ -156,6 +156,20 @@ CUDA_VISIBLE_DEVICES=0 python moral_steer_all_layers_robust.py \
   --n_rollouts 5
 ```
 
+### Ablation: Baseline Capability Preservation (Optional)
+
+Use `test_steering_mmlu.py` to verify that steering interventions don't significantly degrade the model's general reasoning capabilities on MMLU benchmark.
+```bash
+CUDA_VISIBLE_DEVICES=0 python test_steering_mmlu.py \
+    --model_path model_cache/Meta-Llama-3.1-8B-Instruct \
+    --vector_dir MFV130 \
+    --concept_pair care_vs_social_norms \
+    --layer 16 \
+    --n_samples 2000 \
+    --output_path results/mmlu_steering_effect.json
+```
+
+
 ## Command Line Arguments
 
 ### Step 1: Vector Extraction (`universal_moral_vector.py`)
@@ -197,3 +211,17 @@ CUDA_VISIBLE_DEVICES=0 python moral_steer_all_layers_robust.py \
 | `--output_path` | str | (required) | Path to save steering results |
 | `--n_rollouts` | int | 5 | Number of rollouts for robust evaluation |
 
+### Ablation: Baseline Capability Preservation (`test_steering_mmlu.py`)
+
+| Argument | Type | Default | Description |
+|----------|------|---------|-------------|
+| `--model_path` | str | (required) | Path to the model |
+| `--vector_dir` | str | (required) | Directory containing concept vectors |
+| `--concept_pair` | str | (required) | Concept pair to test |
+| `--layer` | int | (required) | Layer to apply steering |
+| `--n_samples` | int | 2000 | Number of MMLU samples to evaluate |
+| `--output_path` | str | (required) | Path to save results |
+
+## Sparse Autoencoder Analysis
+
+For SAE-based feature analysis and sparse steering experiments, see the [`sparse_autoencoders`](https://github.com/AiChiMoCha/MFT_LLMs/tree/sparse_autoencoders) branch.
